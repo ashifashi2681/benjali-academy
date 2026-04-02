@@ -1,26 +1,154 @@
 @import "tailwindcss";
 
 :root {
-  --background: #ffffff;
-  --foreground: #171717;
+	--background: #f8fafc;
+	--foreground: #171717;
+}
+
+@theme {
+	/* =========================
+     PRIMARY (Gold)
+  ========================= */
+	--color-primary-50: #f8f3e3;
+	--color-primary-100: #f1e7c7;
+	--color-primary-200: #e4d08f;
+	--color-primary-300: #d7b957;
+	--color-primary-400: #cfa63f;
+	--color-primary-500: #ca9d31;
+	--color-primary-600: #b88d2c;
+	--color-primary-700: #9a7625;
+	--color-primary-800: #7c5f1e;
+	--color-primary-900: #5e4817;
+
+	/* =========================
+     SECONDARY (Blue)
+  ========================= */
+	--color-secondary-50: #eaf2f9;
+	--color-secondary-100: #d6e4f2;
+	--color-secondary-200: #adc9e5;
+	--color-secondary-300: #84aed8;
+	--color-secondary-400: #5b93cb;
+	--color-secondary-500: #3471aa;
+	--color-secondary-600: #2e6599;
+	--color-secondary-700: #25537f;
+	--color-secondary-800: #1d4166;
+	--color-secondary-900: #142f4c;
+
+	/* =========================
+     ACCENT
+  ========================= */
+	--color-accent-gold: #e0b94b;
+	--color-accent-blue: #4a8fd1;
+
+	/* =========================
+     NEUTRALS
+  ========================= */
+	--color-background: #f8fafc;
+	--color-surface: #ffffff;
+	--color-muted: #f1f5f9;
+
+	--color-border: #e2e8f0;
+	--color-border-strong: #cbd5e1;
+
+	--color-text-primary: #0f172a;
+	--color-text-secondary: #475569;
+	--color-text-muted: #94a3b8;
+
+	/* =========================
+     SEMANTIC
+  ========================= */
+	--color-success: #16a34a;
+	--color-warning: #f59e0b;
+	--color-error: #dc2626;
+	--color-info: #0ea5e9;
+
+	/* =========================
+     GRADIENT
+  ========================= */
+	--gradient-brand: linear-gradient(135deg, #ca9d31, #3471aa);
+}
+
+@theme {
+	--text-*: initial;
+	--text-xxs: clamp(9.26px, 0.03vi + 9.16px, 9.63px);
+	--text-xs: clamp(11.11px, 0.09vi + 10.81px, 12.16px);
+	--text-sm: clamp(13.33px, 0.17vi + 12.8px, 15.2px);
+	--text-base: clamp(16px, 0.27vi + 15.14px, 19px);
+	--text-md: clamp(19.2px, 0.41vi + 17.9px, 23.75px);
+	--text-lg: clamp(23.04px, 0.59vi + 21.14px, 29.69px);
+	--text-xl: clamp(27.65px, 0.84vi + 24.94px, 37.11px);
+	--text-xxl: clamp(33.18px, 1.18vi + 29.4px, 46.39px);
+	--text-xxxl: clamp(39.81px, 1.62vi + 34.62px, 57.98px);
+	--text-xxxxl: clamp(47.77px, 2.19vi + 40.77px, 72.48px);
+	--text-xxxxxl: clamp(57.33px, 2.91vi + 48.03px, 90.6px);
+}
+.main-description {
+	@apply text-text-secondary text-lg leading-relaxed max-w-xl
+}
+.glass-card {
+	background: rgba(255, 255, 255, 0.4);
+	backdrop-filter: blur(12px);
+	-webkit-backdrop-filter: blur(12px);
+}
+.glass-dark {
+	background: rgba(43, 52, 55, 0.05);
+	backdrop-filter: blur(10px);
+	-webkit-backdrop-filter: blur(10px);
+}
+.quadrant-line {
+	position: absolute;
+	background-color: #02adc8;
+}
+
+.mesh-bg {
+	background-color: #f9f9ff;
+	background-image: radial-gradient(
+			at 0% 0%,
+			rgba(2, 173, 200, 0.15) 0px,
+			transparent 50%
+		),
+		radial-gradient(
+			at 100% 0%,
+			rgba(93, 119, 172, 0.1) 0px,
+			transparent 50%
+		),
+		radial-gradient(
+			at 100% 100%,
+			rgba(2, 173, 200, 0.1) 0px,
+			transparent 50%
+		),
+		radial-gradient(
+			at 0% 100%,
+			rgba(44, 129, 147, 0.15) 0px,
+			transparent 50%
+		);
+}
+.floating {
+	animation: float 6s ease-in-out infinite;
+}
+@keyframes float {
+	0% {
+		transform: translateY(0px);
+	}
+	50% {
+		transform: translateY(-20px);
+	}
+	100% {
+		transform: translateY(0px);
+	}
 }
 
 @theme inline {
-  --color-background: var(--background);
-  --color-foreground: var(--foreground);
-  --font-sans: var(--font-geist-sans);
-  --font-mono: var(--font-geist-mono);
+	--color-background: var(--background);
+	--color-foreground: var(--foreground);
 }
 
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
-  }
+@theme {
+  --font-sans: var(--font-inter);
+  --font-heading: var(--font-dm-sans);
 }
 
 body {
-  background: var(--background);
-  color: var(--foreground);
-  font-family: Arial, Helvetica, sans-serif;
+	background: var(--background);
+	color: var(--foreground);
 }
