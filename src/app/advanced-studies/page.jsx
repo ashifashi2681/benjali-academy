@@ -1,5 +1,6 @@
 import HeroC from '@/components/sections/heroC'
 import SectionA from '@/components/sections/sectionA'
+import SectionB from '@/components/sections/sectionB'
 import React from 'react'
 
 function AdvancedStudies() {
@@ -7,6 +8,7 @@ function AdvancedStudies() {
     <main>
       <HeroC/>
       <SectionA />
+      <SectionB />
     </main>
   )
 }
