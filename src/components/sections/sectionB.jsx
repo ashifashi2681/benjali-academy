@@ -62,7 +62,7 @@ function SectionB() {
 								src="https://lh3.googleusercontent.com/aida-public/AB6AXuAR1LwOjP0iZ3TW8Rv13e1rDZbNJQppVgvlU_3tex1ji5UsV4096SAo7RBdHqJU2HRaDcs0c5TnhNnmgcx_YyaJJLH6Y_YdXyQpfQNYhmChj2A7wifReVm1xmjiVUrx50ZL8WpHQZNeaPUMl-uACAebqp-hOhKT-FpUN9WqUeypr3Gn0GJhKMkKcj8C-FluNjmm8PUORdpmbHEPMj_Ca3g9YQgT63HCo9u_1C7Q23nqvvGhtn_D_2xUtEvHhERQt6noAzRmgd9-ibEs"
 							/>
 						</div>
-						<div class="h-48 rounded-2xl overflow-hidden shadow-lg border border-border bg-accent-gold p-8 text-text-primary flex flex-col justify-end">
+						<div class="h-48 rounded-2xl overflow-hidden shadow-lg border border-border bg-primary-500 p-8 text-text-primary flex flex-col justify-end">
 							<p class="text-lg font-bold">240+</p>
 							<p class="text-sm opacity-80 uppercase tracking-widest">
 								Patents Filed
@@ -70,7 +70,7 @@ function SectionB() {
 						</div>
 					</div>
 					<div class="space-y-4 pt-12">
-						<div class="h-48 rounded-2xl overflow-hidden shadow-lg border border-border bg-accent-blue p-8 text-text-primary flex flex-col justify-end">
+						<div class="h-48 rounded-2xl overflow-hidden shadow-lg border border-border bg-secondary-500 p-8 text-text-primary flex flex-col justify-end">
 							<p class="text-lg font-bold">$12M</p>
 							<p class="text-sm opacity-80 uppercase tracking-widest">
 								Research Grants
