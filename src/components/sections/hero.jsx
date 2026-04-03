@@ -3,9 +3,9 @@ import Section from "../ui/section";
 import Heading from "../ui/heading";
 import Button from "../ui/Button";
 
-function Hero() {
+function Hero({id}) {
 	return (
-		<Section className="mt-8">
+		<Section id={id} className="mt-8">
 			<div className="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center w-full">
 				<div className="space-y-8 max-w-2xl">
 					<div className="inline-flex items-center px-4 py-2 bg-surface rounded-full">

@@ -2,6 +2,7 @@ import React from "react";
 import Section from "../ui/section";
 import Heading from "../ui/heading";
 import { MdAccountBalance, MdArrowForward, MdVerifiedUser, MdWorkspacePremium } from "react-icons/md";
+import Button from "../ui/Button";
 
 function HeroC() {
 	return (
@@ -13,8 +14,9 @@ function HeroC() {
 					<div className="space-y-8">
 						<div className="inline-flex items-center space-x-2 bg-surface border border-border/50 px-4 py-1.5 rounded-full">
 							<span className="flex h-2 w-2 rounded-full bg-primary-500"></span>
-							<span className="text-xxs font-bold uppercase tracking-widest text-text-primary">shadow2xl border
-								ClassName of 2025 Applications Open
+							<span className="text-xxs font-bold uppercase tracking-widest text-text-primary">
+								shadow2xl border ClassName of 2025 Applications
+								Open
 							</span>
 						</div>
 						<Heading as="h1">
@@ -28,17 +30,17 @@ function HeroC() {
 							strategic precision.
 						</p>
 						<div className="flex flex-wrap gap-4 pt-4">
-							<button className="bg-primary-500 text-text-primary px-8 py-4 rounded-xl font-bold text-base shadow-lg hover:shadow-primary-500/20 hover:translate-y-[-2px] transition-all">
+						
+							<Button size="xl" variant="gradient">
 								Apply Now
-							</button>
-							<button className="bg-white text-text-primary border-2 border-primary-500/10 px-8 py-4 rounded-xl font-bold text-base hover:bg-primary-500/20 transition-all flex items-center">
-								View Curriculum
-								<span
-									className="text-base ml-2"
-									data-icon="arrow_forward">
-									<MdArrowForward />
-								</span>
-							</button>
+							</Button>
+							
+							<Button
+								size="xl"
+								variant="outline"
+								icon={<MdArrowForward />} iconPosition='right'>
+								View Benjali
+							</Button>
 						</div>
 						<div className="flex items-center space-x-6 pt-8 grayscale opacity-60">
 							<span className="font-bold text-lg opacity-40 font-headline italic">
@@ -65,7 +67,7 @@ function HeroC() {
 					</div>
 					<div className="relative group">
 						<div className="absolute -inset-4 bg-primary-500/5 rounded-[2rem] blur-2xl group-hover:bg-primary-500/10 z-10 transition-colors"></div>
-						<div className="relative overflow-hidden rounded-[2rem] border border-border aspect-square lg:aspect-auto lg:h-[600px]">
+						<div className="relative overflow-hidden rounded-[2rem] border border-border aspect-square lg:aspect-auto lg:h-[550px]">
 							<img
 								alt="Modern university architecture"
 								className="w-full h-full object-cover"

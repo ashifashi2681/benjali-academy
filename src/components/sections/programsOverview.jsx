@@ -21,9 +21,9 @@ function ProgramsOverview() {
 							synergy between advanced coding and high-end design
 							principles.
 						</p>
-						<button className="bg-surface text-text-primary px-8 py-4 rounded-xl font-bold shadow-sm hover:shadow-xl hover:-translate-y-1 transition-all">
+						<Button size="xl">
 							View More
-						</button>
+						</Button>
 					</div>
 					<span className="absolute -bottom-4 -right-4 text-[200px] text-text-muted/50 group-hover:rotate-12 transition-transform duration-700">
 						<MdCode />
@@ -43,10 +43,9 @@ function ProgramsOverview() {
 							practitioners seeking to master specialized digital
 							sub-disciplines.
 						</p>
-						<button className="bg-accent-blue text-white px-8 py-4 rounded-xl font-bold hover:bg-tertiary-dim hover:-translate-y-1 transition-all shadow-lg shadow-tertiary/20">
+						<Button size="xl" color="secondary-500">
 							View More
-						</button>
-						{/* <Button size='lg'>View More</Button> */}
+						</Button>
 					</div>
 					<span className="absolute -bottom-4 -right-4 text-[200px] text-white/5 group-hover:-rotate-12 transition-transform duration-700">
 						<MdSchool />

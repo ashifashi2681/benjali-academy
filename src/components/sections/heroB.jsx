@@ -4,10 +4,10 @@ import Heading from "../ui/heading";
 import { MdAnalytics, MdArrowForward, MdAutoAwesome, MdVerified } from "react-icons/md";
 import Button from "../ui/Button";
 
-function HeroB() {
+function HeroB({id}) {
 	return (
-		<Section>
-			<div className="relative pt-20 overflow-hidden min-h-screen flex items-center">
+		<Section id={id}>
+			<div className="relative overflow-hidden min-h-screen flex items-center">
 				<div className="w-full relative z-10 grid grid-cols-1 lg:grid-cols-12 gap-12 items-center">
 					<div className="lg:col-span-5 space-y-8">
 						<div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-primary-100 text-primary-800 text-xs font-bold tracking-wider uppercase">

@@ -14,9 +14,9 @@ import HeroB from "@/components/sections/heroB";
 export default function Home() {
 	return (
 		<main>
-			<Hero />
-			<HeroB />
-			<AboutUs />
+			{/* <Hero id={'hero'}/> */}
+			<HeroB id={"hero"} />
+			<AboutUs id={"aboutus"} />
 			<Events />
 			<ProgramsOverview />
 			<Service />
@@ -25,7 +25,7 @@ export default function Home() {
 			<Presentation />
 			<Portfolio />
 			<Testimonial />
-			<ContactAndMap />
+			<ContactAndMap id={'contact'}/>
 		</main>
 	);
 }

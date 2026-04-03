@@ -4,9 +4,9 @@ import Heading from "../ui/heading";
 import { MdCall, MdExpandMore, MdMail } from "react-icons/md";
 import Button from "../ui/Button";
 
-function ContactAndMap() {
+function ContactAndMap({id}) {
 	return (
-		<Section bg="bg-surface">
+		<Section id={id} bg="bg-surface">
 			<div className="grid grid-cols-1 lg:grid-cols-2 gap-24">
 				<div className="flex flex-col h-full">
 					<Heading helperText="let's get started" className="mb-6">

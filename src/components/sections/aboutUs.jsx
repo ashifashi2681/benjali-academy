@@ -3,9 +3,9 @@ import Section from "../ui/section";
 import Heading from "../ui/heading";
 import { MdBrush, MdSpeed } from "react-icons/md";
 
-function AboutUs() {
+function AboutUs({id}) {
 	return (
-		<Section bg="bg-surface">
+		<Section id={id} bg="bg-surface">
 			<div className="grid grid-cols-1 lg:grid-cols-2 gap-20 items-center">
 				<div className="grid grid-cols-2 gap-6 relative">
 					<div className="space-y-6">
