@@ -17,9 +17,9 @@ function Portfolio() {
 						function in its most elegant state.
 					</p>
 				</div>
-				<button className="text-text-primary font-bold border-b-2 border-border-strong hover:border-accent-blue pb-1 transition-all">
+				{/* <button className="text-text-primary font-bold border-b-2 border-border-strong hover:border-accent-blue pb-1 transition-all">
 					View All Case Studies
-				</button>
+				</button> */}
 			</div>
 			<div className="grid grid-cols-1 md:grid-cols-2 gap-12">
 				<div className="group relative rounded-2xl overflow-hidden aspect-[4/3] cursor-pointer">

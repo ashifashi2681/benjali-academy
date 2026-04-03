@@ -26,12 +26,7 @@ function Hero({id}) {
 						<Button variant="gradient" size="xl">
 							Start a Project
 						</Button>
-						{/* <button className="bg-primary-500 hover:bg-primary-300 text-white px-8 py-4 rounded-xl font-semibold transition-all shadow-lg shadow-primary-100">
-							Start a Project
-						</button>
-						<button className="bg-surface text-primary-500 px-8 py-4 rounded-xl font-semibold border hover:bg-background transition-all">
-							View Work
-						</button> */}
+
 						<Button variant="outline" size="xl">
 							View Work
 						</Button>
@@ -42,8 +37,8 @@ function Hero({id}) {
 					<div className="relative rounded-[2rem] overflow-hidden shadow-2xl rotate-2 transform hover:rotate-0 transition-transform duration-700">
 						<img
 							alt="Abstract 3D digital sculpture"
-							className="w-full h-[600px] object-cover"
-							src="https://lh3.googleusercontent.com/aida-public/AB6AXuAizYLbBvBePy-INvniGNU3iSo0AFMelpqrVmA_H9SumeqhZKByMfoOJCZaOWleSp4gYXifY-Whlwpx-93pF_Apscl7gnnmHvG6w3xeNFgIat8OBOsNmYpeIJLZi-bAzKT3wEy1NwgPG0k09VclGqvk0tBmzkENSswqYutRlYSWPs-3F5XNlUub3fWU90P6rV1CTaqIHfLUlYyNKdcfPHMqv5jOo3WDhGaIv_UaFIA5uN_ajGPI5b4sKPjhymhBjqtDKCQyhphN9qoN"
+							className="w-full h-[550px] object-cover"
+							src="https://img.freepik.com/free-photo/3d-rendering-abstract-flowing-shape-with-twisted-colorful-stripes_250435-1793.jpg?semt=ais_incoming&w=740&q=80"
 						/>
 					</div>
 					<div className="absolute bottom-10 -left-10 glass-card p-6 rounded-2xl shadow-xl max-w-[200px]">
