@@ -16,6 +16,18 @@ function normalizeHref(href) {
 	return `${normalizedPath}${hash ? `#${hash}` : ""}`;
 }
 
+function parseHref(href) {
+	const normalizedHref = normalizeHref(href);
+	const [path, hash = ""] = normalizedHref.split("#");
+
+	return {
+		path: path || "/",
+		hash: hash ? `#${hash}` : "",
+		id: hash || "",
+		href: normalizedHref,
+	};
+}
+
 function resolveActiveHref(items, pathname, hash) {
 	const pathnameOnly = pathname || "/";
 	const hashValue = hash || "";
@@ -47,6 +59,13 @@ function Navbar() {
 		() => navData.map((item) => ({ ...item, link: normalizeHref(item.link) })),
 		[]
 	);
+	const sectionItems = useMemo(
+		() =>
+			normalizedItems
+				.map((item) => ({ ...item, ...parseHref(item.link) }))
+				.filter((item) => item.id),
+		[normalizedItems]
+	);
 
 	useEffect(() => {
 		const syncHash = () => {
@@ -62,6 +81,65 @@ function Navbar() {
 	useEffect(() => {
 		setActiveHref(resolveActiveHref(normalizedItems, pathname, currentHash));
 	}, [currentHash, normalizedItems, pathname]);
+
+	useEffect(() => {
+		const pathnameOnly = pathname || "/";
+		const observableSections = sectionItems.filter((item) => item.path === pathnameOnly);
+
+		if (!observableSections.length) return undefined;
+
+		const visibleSections = new Map();
+		const observer = new IntersectionObserver(
+			(entries) => {
+				entries.forEach((entry) => {
+					const href = entry.target.getAttribute("data-nav-href");
+					if (!href) return;
+
+					if (entry.isIntersecting) {
+						visibleSections.set(href, entry.intersectionRatio);
+						return;
+					}
+
+					visibleSections.delete(href);
+				});
+
+				if (!visibleSections.size) return;
+
+				const [nextHref] = [...visibleSections.entries()].sort((a, b) => b[1] - a[1])[0];
+				if (!nextHref || nextHref === activeHref) return;
+
+				setActiveHref(nextHref);
+
+				const nextHash = parseHref(nextHref).hash;
+				if (nextHash && nextHash !== window.location.hash) {
+					window.history.replaceState(null, "", `${pathnameOnly}${nextHash}`);
+					setCurrentHash(nextHash);
+				}
+			},
+			{
+				root: null,
+				rootMargin: "100px 0px -55% 0px",
+				threshold: [0.2, 0.35, 0.5, 0.65, 0.8],
+			}
+		);
+
+		observableSections.forEach((item) => {
+			const sectionElement = document.getElementById(item.id);
+			if (!sectionElement) return;
+
+			sectionElement.setAttribute("data-nav-href", item.href);
+			observer.observe(sectionElement);
+		});
+
+		return () => {
+			observer.disconnect();
+			observableSections.forEach((item) => {
+				const sectionElement = document.getElementById(item.id);
+				if (!sectionElement) return;
+				sectionElement.removeAttribute("data-nav-href");
+			});
+		};
+	}, [activeHref, pathname, sectionItems]);
 
 	useEffect(() => {
 		const updateIndicator = () => {

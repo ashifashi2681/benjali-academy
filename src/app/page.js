@@ -17,7 +17,7 @@ export default function Home() {
 			{/* <Hero id={'hero'}/> */}
 			<HeroB id={"hero"} />
 			<AboutUs id={"aboutus"} />
-			<Events />
+			<Events id="events" />
 			<ProgramsOverview />
 			<Service />
 			<StartegicApproch />
@@ -25,7 +25,7 @@ export default function Home() {
 			<Presentation />
 			<Portfolio />
 			<Testimonial />
-			<ContactAndMap id={'contact'}/>
+			<ContactAndMap id={"contact"} />
 		</main>
 	);
 }

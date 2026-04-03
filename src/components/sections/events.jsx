@@ -2,9 +2,9 @@ import React from "react";
 import Section from "../ui/section";
 import Heading from "../ui/heading";
 
-function Events() {
+function Events({id}) {
 	return (
-		<Section>
+		<Section id={id}>
 			<div>
 				<div className="flex flex-col md:flex-row justify-between items-end mb-16 gap-6">
 					<div>
