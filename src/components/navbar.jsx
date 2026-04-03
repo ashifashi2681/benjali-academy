@@ -6,6 +6,7 @@ import { usePathname } from "next/navigation";
 
 import { navData } from "@/lib/navigation";
 import Button from "./ui/Button";
+import MobileNavbar from "./mobile-navbar";
 
 function normalizeHref(href) {
 	if (!href) return "/";
@@ -176,7 +177,7 @@ function Navbar() {
 					BRAND
 				</Link>
 
-				<div className="hidden items-center gap-3 md:flex">
+				<div className="hidden items-center gap-3 lg:flex">
 					<div
 						ref={navListRef}
 						className="relative flex items-center rounded-full border border-border/70 bg-muted/70 p-1.5">
@@ -229,11 +230,7 @@ function Navbar() {
 					</Button>
 				</div>
 
-				<div className="md:hidden">
-					<Button size="sm" variant="gradient">
-						Quote
-					</Button>
-				</div>
+				<MobileNavbar />
 			</div>
 		</nav>
 	);
