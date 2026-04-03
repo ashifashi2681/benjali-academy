@@ -1,4 +1,5 @@
 import React from 'react'
+import Button from './ui/Button';
 
 function Navbar() {
   return (
@@ -34,9 +35,8 @@ function Navbar() {
 						Contact
 					</a>
 				</div>
-				<button className="bg-primary-500 text-text-primary px-6 py-2.5 rounded-xl font-medium text-sm hover:scale-95 transition-all duration-200 ease-in-out active:scale-90">
-					Get a Quote
-				</button>
+				<Button size="md" variant="gradient">Get a Quote</Button>
+				
 			</div>
 		</nav>
   );

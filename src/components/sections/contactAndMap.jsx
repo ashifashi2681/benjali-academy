@@ -2,6 +2,7 @@ import React from "react";
 import Section from "../ui/section";
 import Heading from "../ui/heading";
 import { MdCall, MdExpandMore, MdMail } from "react-icons/md";
+import Button from "../ui/Button";
 
 function ContactAndMap() {
 	return (
@@ -139,11 +140,9 @@ function ContactAndMap() {
 							Message
 						</label>
 					</div>
-					<button
-						className="w-full bg-accent-gold hover:bg-accent-gold/80 text-white py-4 rounded-xl font-bold transition-all shadow-xl shadow-accent-gold/20 hover:scale-[1.02] active:scale-[0.98]"
-						type="submit">
+					<Button variant="gradient" size="xl" fullWidth={true}>
 						Send Message
-					</button>
+					</Button>
 				</form>
 			</div>
 		</Section>

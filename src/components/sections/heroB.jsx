@@ -2,6 +2,7 @@ import React from "react";
 import Section from "../ui/section";
 import Heading from "../ui/heading";
 import { MdAnalytics, MdArrowForward, MdAutoAwesome, MdVerified } from "react-icons/md";
+import Button from "../ui/Button";
 
 function HeroB() {
 	return (
@@ -27,15 +28,18 @@ function HeroB() {
 							the next generation of digital products.
 						</p>
 						<div className="flex flex-wrap gap-4 pt-4">
-							<button className="bg-primary-500 text-surface px-8 py-4 rounded-xl font-bold flex items-center gap-2 hover:shadow-lg transition-all active:scale-95">
+							<Button
+								variant="gradient"
+								size="xl"
+								icon={<MdArrowForward />}
+								iconPosition="right">
 								View Projects
-								<span className="text-base">
-									<MdArrowForward />
-								</span>
-							</button>
-							<button className="bg-surface text-text-primary border border-border px-8 py-4 rounded-xl font-bold hover:bg-secondary-100 transition-all">
+							</Button>
+							<Button
+								variant="outline"
+								size="xl">
 								Our Process
-							</button>
+							</Button>
 						</div>
 						<div className="flex items-center gap-6 pt-8 border-t border-border">
 							<div className="flex -space-x-3">

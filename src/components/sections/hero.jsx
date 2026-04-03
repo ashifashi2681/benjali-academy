@@ -1,6 +1,7 @@
 import React from "react";
 import Section from "../ui/section";
 import Heading from "../ui/heading";
+import Button from "../ui/Button";
 
 function Hero() {
 	return (
@@ -22,12 +23,18 @@ function Hero() {
 						and inspire trust.
 					</p>
 					<div className="flex flex-wrap gap-4 pt-4">
-						<button className="bg-primary-500 hover:bg-primary-300 text-white px-8 py-4 rounded-xl font-semibold transition-all shadow-lg shadow-primary-100">
+						<Button variant="gradient" size="xl">
+							Start a Project
+						</Button>
+						{/* <button className="bg-primary-500 hover:bg-primary-300 text-white px-8 py-4 rounded-xl font-semibold transition-all shadow-lg shadow-primary-100">
 							Start a Project
 						</button>
 						<button className="bg-surface text-primary-500 px-8 py-4 rounded-xl font-semibold border hover:bg-background transition-all">
 							View Work
-						</button>
+						</button> */}
+						<Button variant="outline" size="xl">
+							View Work
+						</Button>
 					</div>
 				</div>
 				<div className="relative hidden lg:block">

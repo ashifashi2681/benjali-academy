@@ -2,6 +2,7 @@ import React from "react";
 import Section from "../ui/section";
 import Heading from "../ui/heading";
 import { MdCode, MdSchool } from "react-icons/md";
+import Button from "../ui/Button";
 
 function ProgramsOverview() {
 	return (
@@ -45,6 +46,7 @@ function ProgramsOverview() {
 						<button className="bg-accent-blue text-white px-8 py-4 rounded-xl font-bold hover:bg-tertiary-dim hover:-translate-y-1 transition-all shadow-lg shadow-tertiary/20">
 							View More
 						</button>
+						{/* <Button size='lg'>View More</Button> */}
 					</div>
 					<span className="absolute -bottom-4 -right-4 text-[200px] text-white/5 group-hover:-rotate-12 transition-transform duration-700">
 						<MdSchool />
