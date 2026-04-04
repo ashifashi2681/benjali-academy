@@ -3,10 +3,10 @@ import Section from '../ui/section';
 import Heading from '../ui/heading';
 import { MdCorporateFare, MdScience } from 'react-icons/md';
 
-function SectionB() {
+function SectionB({id}) {
   return (
 		// Research & Innovation
-		<Section>
+		<Section id={id}>
 			<div class="grid lg:grid-cols-12 gap-12 items-center">
 				<div class="lg:col-span-5 space-y-6">
 					<Heading helperText="journy" as="h2">

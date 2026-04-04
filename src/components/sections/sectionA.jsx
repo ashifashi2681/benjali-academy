@@ -3,10 +3,10 @@ import Section from "../ui/section";
 import Heading from "../ui/heading";
 import { MdDeviceHub, MdLeaderboard, MdLightbulb, MdOpenInNew } from "react-icons/md";
 
-function SectionA() {
+function SectionA({id}) {
 	return (
 		// Specialized Tracks Section
-		<Section bg="bg-accent-blue/5">
+		<Section id={id} bg="bg-accent-blue/5">
 			<div className="text-center mb-16 space-y-4">
 				<Heading helperText="how we track!" as="h2">
 					Specialized Tracks
@@ -17,7 +17,7 @@ function SectionA() {
 				</p>
 			</div>
 			<div className="grid md:grid-cols-3 gap-8">
-				<div className="glass-card p-10 rounded-3xl border border-border shadow-sm hover:shadow-xl transition-all group">
+				<div className="bg-surface p-10 rounded-3xl border border-border shadow-sm hover:shadow-xl transition-all group">
 					<div className="w-16 h-16 bg-secondary-50 rounded-2xl flex items-center justify-center mb-8 group-hover:scale-110 transition-transform">
 						<span
 							className=" text-accent-blue text-xl"
@@ -41,7 +41,7 @@ function SectionA() {
 						</span>
 					</a>
 				</div>
-				<div className="glass-card p-10 rounded-3xl border border-white shadow-sm hover:shadow-xl transition-all group">
+				<div className="bg-surface p-10 rounded-3xl border border-white shadow-sm hover:shadow-xl transition-all group">
 					<div className="w-16 h-16 bg-primary-50 rounded-2xl flex items-center justify-center mb-8 group-hover:scale-110 transition-transform">
 						<span
 							className="text-accent-gold text-xl"
@@ -66,7 +66,7 @@ function SectionA() {
 						</span>
 					</a>
 				</div>
-				<div className="glass-card p-10 rounded-3xl border border-white shadow-sm hover:shadow-xl transition-all group">
+				<div className="bg-surface p-10 rounded-3xl border border-white shadow-sm hover:shadow-xl transition-all group">
 					<div className="w-16 h-16 bg-secondary-50 rounded-2xl flex items-center justify-center mb-8 group-hover:scale-110 transition-transform">
 						<span
 							className="text-accent-blue text-xl"

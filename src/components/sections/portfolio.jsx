@@ -2,9 +2,9 @@ import React from "react";
 import Section from "../ui/section";
 import Heading from "../ui/heading";
 
-function Portfolio() {
+function Portfolio({id}) {
 	return (
-		<Section bg="bg-surface">
+		<Section id={id} bg="bg-surface">
 			<div className="flex flex-col md:flex-row justify-between items-end mb-16 gap-8">
 				<div className="max-w-xl">
 					<Heading

@@ -3,9 +3,9 @@ import Section from "../ui/section";
 import Heading from "../ui/heading";
 import { MdGridView, MdLayers, MdLightbulb } from "react-icons/md";
 
-function Service() {
+function Service({id}) {
 	return (
-		<Section>
+		<Section id={id}>
 			<div className="text-center mb-20 max-w-3xl mx-auto">
 				<Heading helperText="Our Expertise">
 					Bespoke services for the digital vanguard.

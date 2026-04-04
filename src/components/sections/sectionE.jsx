@@ -3,10 +3,10 @@ import Section from "../ui/section";
 import Heading from "../ui/heading";
 import { MdPalette, MdTerminal } from "react-icons/md";
 
-function SectionE() {
+function SectionE({id}) {
 	return (
 		// Program Overview
-		<Section bg="bg-surface">
+		<Section id={id} bg="bg-surface">
 			<div className="grid lg:grid-cols-2 gap-16 items-center">
 				<div className="rounded-2xl overflow-hidden shadow-2xl relative aspect-video">
 					<img

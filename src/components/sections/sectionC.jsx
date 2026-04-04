@@ -2,10 +2,10 @@ import React from 'react'
 import Section from '../ui/section';
 import Heading from '../ui/heading';
 
-function SectionC() {
+function SectionC({id}) {
   return (
 		// Admissions/Enrollment
-		<Section bg="bgsurface" className="border-y border-border/80">
+		<Section id={id} bg="bgsurface" className="border-y border-border/80">
 			<div className="text-center mb-16">
 				<Heading className="mb-3">Admissions Path</Heading>
 

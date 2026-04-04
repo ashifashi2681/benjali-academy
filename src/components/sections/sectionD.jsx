@@ -3,10 +3,10 @@ import Section from '../ui/section';
 import Heading from '../ui/heading';
 import Button from '../ui/Button';
 
-function SectionD() {
+function SectionD({id}) {
   return (
 		// Final CTA
-		<Section bg="bg-primary-500/5">
+		<Section id={id} bg="bg-primary-500/5">
 			<div class="absolute inset-0 -z-10"></div>
 			<div class="max-w-4xl mx-auto glass-card border border-border/50 p-12 lg:p-20 rounded-[3rem] text-center shadow-2xl relative">
 				<div class="absolute -top-10 -right-10 w-40 h-40 bg-accent-gold/30 rounded-full blur-3xl"></div>

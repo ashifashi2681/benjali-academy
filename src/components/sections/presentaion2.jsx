@@ -3,9 +3,9 @@ import Section from "../ui/section";
 import Heading from "../ui/heading";
 import { MdHub, MdLightbulb, MdMonitorHeart, MdShoppingCart } from "react-icons/md";
 
-function Presentaion2() {
+function Presentaion2({id}) {
 	return (
-		<Section>
+		<Section id={id}>
 			<div className="overflow-hidden bg-surface shadow-2xl rounded-[2rem] flex flex-col md:flex-row">
 				<div className="w-full md:w-[40%] bg-secondary-500 p-12 md:p-20 text-white flex flex-col relative overflow-hidden min-h-[500px]">
 					<div className="z-10 space-y-6">

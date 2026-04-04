@@ -2,9 +2,9 @@ import React from "react";
 import Section from "../ui/section";
 import Heading from "../ui/heading";
 
-function Testimonial() {
+function Testimonial({id}) {
 	return (
-		<Section>
+		<Section id={id}>
 			<div className="grid grid-cols-1 lg:grid-cols-3 gap-12">
 				<div className="lg:sticky lg:top-40 h-fit">
 					<Heading

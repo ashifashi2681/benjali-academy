@@ -3,9 +3,9 @@ import Section from "../ui/section";
 import Heading from "../ui/heading";
 import { MdAnalytics, MdArchitecture, MdAutoAwesome } from "react-icons/md";
 
-function StartegicApproch() {
+function StartegicApproch({id}) {
 	return (
-		<Section bg="bg-surface">
+		<Section bg="bg-surface" id={id}>
 			<div className="grid grid-cols-1 lg:grid-cols-2 gap-24 items-center">
 				<div className="max-w-xl">
 					<Heading helperText="Methodology" className="mb-6">

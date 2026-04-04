@@ -2,9 +2,9 @@ import React from "react";
 import Heading from "../ui/heading";
 import { MdCall, MdHandshake, MdPayments, MdSettings } from "react-icons/md";
 
-function Presentation() {
+function Presentation({id}) {
 	return (
-		<section>
+		<section id={id}>
 			<div className="w-full bg-secondary-500 min-h-[220px] relative px-12 md:px-24 flex items-center justify-between overflow-hidden">
 				<Heading color="text-white" className="z-10">
 					Your Business

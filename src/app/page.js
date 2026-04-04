@@ -8,23 +8,25 @@ import Service from "@/components/sections/service";
 import ProgramsOverview from "@/components/sections/programsOverview";
 import Events from "./../components/sections/events";
 import AboutUs from "@/components/sections/aboutUs";
-import Hero from "@/components/sections/hero";
 import HeroB from "@/components/sections/heroB";
+import SectionH from "@/components/sections/sectionH";
+import SectionI from "@/components/sections/sectionI";
 
 export default function Home() {
 	return (
 		<main>
-			{/* <Hero id={'hero'}/> */}
 			<HeroB id={"hero"} />
 			<AboutUs id={"aboutus"} />
 			<Events id="events" />
 			<ProgramsOverview />
-			<Service />
-			<StartegicApproch />
-			<Presentaion2 />
-			<Presentation />
-			<Portfolio />
-			<Testimonial />
+			<SectionH id={"bca-program"} />
+			<SectionI id={"advanced-studies"} />
+			<Service id={"services"} />
+			<StartegicApproch id={"StartegicApproch"} />
+			<Presentaion2 id={'business-presentation'} />
+			<Presentation id={'business-presentation-2'}/>
+			<Portfolio id={'portfolio'} />
+			<Testimonial id={'testimonial'} />
 			<ContactAndMap id={"contact"} />
 		</main>
 	);

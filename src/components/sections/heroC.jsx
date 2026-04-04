@@ -4,9 +4,9 @@ import Heading from "../ui/heading";
 import { MdAccountBalance, MdArrowForward, MdVerifiedUser, MdWorkspacePremium } from "react-icons/md";
 import Button from "../ui/Button";
 
-function HeroC() {
+function HeroC({id}) {
 	return (
-		<Section className="mt-8 relative">
+		<Section id={id} className="mt-8 relative">
 			<div className="absolute top-0 right-0 -z-10 w-1/2 h-full bg-gradient-to-l from-primary-500/20 to-transparent blur-3xl"></div>
 			<div className="absolute bottom-0 left-0 -z-10 w-1/3 h-1/2 bg-gradient-to-tr from-secondary-500/30 to-transparent blur-3xl"></div>
 			<div className="overflow-hidden min-h[921px] flex items-center">

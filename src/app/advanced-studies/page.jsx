@@ -7,14 +7,14 @@ import React from 'react'
 
 function AdvancedStudies() {
   return (
-    <main>
-      <HeroC/>
-      <SectionA />
-      <SectionB />
-      <SectionC />
-      <SectionD />
-    </main>
-  )
+		<main>
+			<HeroC id={"adv-studies-hero"} />
+			<SectionA id={"tracking"} />
+			<SectionB id={"research-innovation"} />
+			<SectionC id={"enrollment"} />
+			<SectionD id={'adv-std-cta'}/>
+		</main>
+  );
 }
 
 export default AdvancedStudies

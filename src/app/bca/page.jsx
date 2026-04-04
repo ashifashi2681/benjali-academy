@@ -7,14 +7,14 @@ import React from 'react'
 
 function Bca() {
   return (
-    <main>
-        <Hero />
-        <SectionE />
-        <SectionF />
-        <SectionG />
-        <SectionD />
-    </main>
-  )
+		<main>
+			<Hero id={"bca-hero"} />
+			<SectionE id={"program-overview"} />
+			<SectionF id={"highlights"} />
+			<SectionG id={"career-pathways"} />
+			<SectionD id={"bca-cta"} />
+		</main>
+  );
 }
 
 export default Bca
