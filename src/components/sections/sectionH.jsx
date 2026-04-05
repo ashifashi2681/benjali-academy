@@ -12,13 +12,13 @@ function SectionH({ id }) {
 				<div className="w-full md:w-1/2 h-[500px] relative">
 					<img
 						alt="Students collaborating"
-						className="w-full h-full object-cover rounded-l-3xl"
+						className="w-full h-full object-cover rounded-t-3xl md:rounded-t-none md:rounded-l-3xl"
 						data-alt="Modern bright university Nameclassroom with diverse students collaborating around a wooden table, soft natural sunlight, professional academic atmosphere"
 						src="https://lh3.googleusercontent.com/aida-public/AB6AXuDIvmfR5TbPjS52lUaylYCsTkLpasOFIXmfdnUr_kw7F6piRGFa9zPK_xRkJKwlCsoFZCsy1Qo1ex4i32mNNBx_PBLqRE9GvwsmlnuQf0OVPfxLTaCWN9OMyhrAT_rr7L1uffYmWEmoUZmcWawPyGfhijPXJBCTmAk-weW-uzodhYasZmWXD6PcNqGuKtB8viYubObqDCSiNPGzA487o2URuDKuxodIDSZChj4UvJThfpTrlUxzZlELHZFeDIBkP7Nwr-wC9XXTR8Yt"
 					/>
 					<div className="absolute inset-0 bg-gradient-to-r from-transparent to-surface/40"></div>
 				</div>
-				<div className="w-full md:w-1/2 p-8">
+				<div className="w-full md:w-1/2 md:pl-8 mt-5 md:mt-0">
 					<div className="max-w-xl">
 						<Heading className="mb-6" helperText="CORE CURRICULUM">
 							BCA Program Overview
@@ -58,7 +58,12 @@ function SectionH({ id }) {
 								</div>
 							</div>
 						</div>
-						<Button icon={<MdArrowForward />} iconPosition="right" variant='gradient'>View More</Button>
+						<Button
+							icon={<MdArrowForward />}
+							iconPosition="right"
+							variant="gradient">
+							View More
+						</Button>
 					</div>
 				</div>
 			</div>

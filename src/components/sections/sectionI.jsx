@@ -10,7 +10,7 @@ function SectionI({ id }) {
 		<Section id={id} bg="bg-surface">
 			<div className="flex flex-col-reverse md:flex-row items-center overflow-hidden">
 				<div className="w-full md:w-1/2">
-					<div className="max-w-xl">
+					<div className="max-w-xl md:pr-8 mt-5 md:mt-0">
 						<Heading
 							className="mb-6"
 							helperText="POST-GRADUATE EXCELLENCE">
@@ -51,7 +51,7 @@ function SectionI({ id }) {
 				<div className="w-full md:w-1/2 h-[500px] relative">
 					<img
 						alt="Corporate skyscraper"
-						className="w-full h-full object-cover rounded-r-3xl"
+						className="w-full h-full object-cover rounded-t-3xl md:rounded-t-none md:rounded-r-3xl"
 						data-alt="Low angle shot of a sleek modern glass skyscraper reflecting a clear blue sky, representing professional development, corporate strategy, and high-end achievement"
 						src="https://lh3.googleusercontent.com/aida-public/AB6AXuDxDHbH9icRJvxen0rA7eVzquaL80Fczbwq61kFQFrctKalvibKz58SeIzQXfitbazrMPtXmdeFXGOiy_3G8U_-uJ_K4aS1DhjuJhg03VdRdlsayxZSXQk_9L9AjIfhY-D2whH9yuQm0AxyUPBC00_pRVWB2uiZ1ymFNrgws4lTXl-8ggNDQ_13pqkXuhtHdau1ePdHsT8mq1QK6NI24Ipi6c7gYEZro1sQOSTNJGRA4ZEK8bkwy4Dxmi5rhKiu4z3u5k31flYOr0Lv"
 					/>

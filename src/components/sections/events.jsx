@@ -65,13 +65,15 @@ function Events({ id }) {
 	return (
 		<Section id={id}>
 			<div>
-				<div className="flex flex-col md:flex-row justify-between items-end mb-16 gap-6">
-					<div>
-						<Heading as="h3" helperText="Latest Buzz">
+				<div className="flex flex-col md:flex-row justify-center md:justify-between items-center md:items-end mb-16 gap-6">
+					<div className="text-center md:text-start">
+						<Heading
+							as="h3"
+							helperText="Latest Buzz">
 							Event Highlights
 						</Heading>
 					</div>
-					<p className="max-w-md text-text-secondary">
+					<p className="max-w-md text-text-secondary text-center md:text-start">
 						Stay updated with our community workshops, design
 						sprints, and industry keynote sessions.
 					</p>
@@ -95,8 +97,7 @@ function Events({ id }) {
 
 export default Events;
 
-/* 
-event card
+/* event card
 <div className="group cursor-pointer">
 	<div className="relative overflow-hidden rounded-2xl mb-6 aspect-square">
 		<img

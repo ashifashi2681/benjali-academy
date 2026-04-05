@@ -6,7 +6,7 @@ import { MdAnalytics, MdArchitecture, MdAutoAwesome } from "react-icons/md";
 function StartegicApproch({id}) {
 	return (
 		<Section bg="bg-surface" id={id}>
-			<div className="grid grid-cols-1 lg:grid-cols-2 gap-24 items-center">
+			<div className="grid grid-cols-1 lg:grid-cols-2 gap-24 items-center overflow-hidden md:overflow-visible">
 				<div className="max-w-xl">
 					<Heading helperText="Methodology" className="mb-6">
 						Strategic Approach
@@ -27,7 +27,7 @@ function StartegicApproch({id}) {
 						</p>
 					</div>
 				</div>
-				<div className="relative pt-12 pb-12 lg:pt-0 lg:pb-0">
+				<div className="relative pt-12 pb-12 lg:pt-0 lg:pb-0 overflowhidden">
 					<div className="flex flex-col gap-8 relative z-10 lg:pl-12">
 						<div className="flex items-center gap-8 self-end md:mr-32 translate-x-4">
 							<div className="w-32 h-32 flex-shrink-0 bg-primary-50 rounded-[2rem] flex items-center justify-center shadow-lg transform -rotate-6">

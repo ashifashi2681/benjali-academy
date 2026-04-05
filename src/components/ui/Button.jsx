@@ -61,11 +61,11 @@ function resolveColorValue(color) {
 }
 
 const sizeClasses = {
-	sm: "h-10 px-4 text-sm gap-2 rounded-xl",
-	md: "h-11 px-5 text-sm gap-2.5 rounded-full",
-	lg: "h-12 px-6 text-sm gap-2.5 rounded-full",
-	xl: "h-14 px-7 text-sm gap-3 rounded-full",
-	icon: "size-11 rounded-xl",
+	sm: "h-9 px-3.5 text-xs gap-1.5 rounded-full sm:h-10 sm:px-4 sm:text-sm sm:gap-2",
+	md: "h-10 px-4 text-xs gap-2 sm:h-10 sm:px-4.5 sm:text-sm sm:gap-2 md:h-11 md:px-5 md:gap-2.5 rounded-full",
+	lg: "h-10 px-4.5 text-xs gap-2 sm:h-11 sm:px-5 sm:text-sm sm:gap-2.5 md:h-12 md:px-6 rounded-full",
+	xl: "h-11 px-5 text-sm gap-2.5 sm:h-12 sm:px-6 sm:gap-3 md:h-14 md:px-7 rounded-full",
+	icon: "size-10 rounded-lg sm:size-11 sm:rounded-xl",
 };
 
 const variantClasses = {
@@ -99,7 +99,11 @@ const Button = forwardRef(function Button(
 	const resolvedColor = resolveColorValue(color);
 	const iconNode = renderIcon(
 		icon,
-		size === "sm" ? "size-4" : size === "icon" ? "size-5" : "size-5"
+		size === "sm"
+			? "size-3.5 sm:size-4"
+			: size === "icon"
+				? "size-4 sm:size-5"
+				: "size-4 sm:size-5"
 	);
 	const resolvedType = type ?? "button";
 	const buttonStyle = {
