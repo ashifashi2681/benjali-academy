@@ -6,7 +6,7 @@
 }
 
 html {
-  scroll-behavior: smooth;
+	scroll-behavior: smooth;
 }
 
 @theme {
@@ -87,7 +87,7 @@ html {
 	--text-xxxxxl: clamp(57.33px, 2.91vi + 48.03px, 90.6px);
 }
 .main-description {
-	@apply text-text-secondary text-base leading-relaxed max-w-xl
+	@apply text-text-secondary text-base leading-relaxed max-w-xl;
 }
 .glass-card {
 	background: rgba(255, 255, 255, 0.4);
@@ -102,6 +102,10 @@ html {
 .quadrant-line {
 	position: absolute;
 	background-color: #02adc8;
+}
+
+.card-zoom:hover .zoom-image {
+	transform: scale(1.05);
 }
 
 .mesh-bg {
@@ -148,8 +152,8 @@ html {
 }
 
 @theme {
-  --font-sans: var(--font-inter);
-  --font-heading: var(--font-dm-sans);
+	--font-sans: var(--font-inter);
+	--font-heading: var(--font-dm-sans);
 }
 
 body {

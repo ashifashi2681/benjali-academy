@@ -5,7 +5,6 @@ import Presentation from "@/components/sections/presentation";
 import Testimonial from "@/components/sections/testimonial";
 import StartegicApproch from "@/components/sections/startegicApproch";
 import Service from "@/components/sections/service";
-import ProgramsOverview from "@/components/sections/programsOverview";
 import Events from "./../components/sections/events";
 import AboutUs from "@/components/sections/aboutUs";
 import HeroB from "@/components/sections/heroB";
@@ -18,7 +17,6 @@ export default function Home() {
 			<HeroB id={"hero"} />
 			<AboutUs id={"aboutus"} />
 			<Events id="events" />
-			<ProgramsOverview />
 			<SectionH id={"bca-program"} />
 			<SectionI id={"advanced-studies"} />
 			<Service id={"services"} />
