@@ -4,7 +4,7 @@ import Heading from "../ui/heading";
 
 function Testimonial({id}) {
 	return (
-		<Section id={id}>
+		<Section bg="bg-surface" id={id}>
 			<div className="grid grid-cols-1 lg:grid-cols-3 gap-12">
 				<div className="lg:sticky lg:top-40 h-fit">
 					<Heading

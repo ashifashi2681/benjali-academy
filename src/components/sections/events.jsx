@@ -63,7 +63,7 @@ function Events({ id }) {
 		},
 	];
 	return (
-		<Section id={id}>
+		<Section bg="bg-surface" id={id}>
 			<div>
 				<div className="flex flex-col md:flex-row justify-center md:justify-between items-center md:items-end mb-16 gap-6">
 					<div className="text-center md:text-start">

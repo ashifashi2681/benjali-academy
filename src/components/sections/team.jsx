@@ -107,7 +107,7 @@ function Team({id}) {
 	const duplicatedPeople = [...people, ...people];
 
 	return (
-		<Section id={id} bg="bg-surface" className="overflow-hidden">
+		<Section id={id} className="overflow-hidden">
 			<div className="mx-auto max-w-4xl text-center">
 				<Heading helperText="Streamline our Team" className="mb-6">
 					Supercharge Our Workflow
