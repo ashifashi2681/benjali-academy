@@ -41,7 +41,7 @@ function HeroB({id}) {
 								Our Process
 							</Button>
 						</div>
-						<div className="flex items-center gap-6 pt-8 border-t border-border">
+						<div className="hidden md:flex items-center gap-6 pt-8 border-t border-border">
 							<div className="flex -space-x-3">
 								<img
 									className="w-10 h-10 rounded-full border-2 border-background object-cover"

@@ -160,3 +160,39 @@ body {
 	background: var(--background);
 	color: var(--foreground);
 }
+
+.team-track {
+	animation: team-slide-loop 28s linear infinite;
+	will-change: transform;
+}
+
+.team-carousel:hover .team-track {
+	animation-play-state: paused;
+}
+
+@keyframes team-slide-loop {
+	from {
+		transform: translate3d(0, 0, 0);
+	}
+	to {
+		transform: translate3d(-50%, 0, 0);
+	}
+}
+
+@media (prefers-reduced-motion: reduce) {
+	.team-track {
+		animation: none;
+	}
+}
+
+.glass-effect {
+	background: rgba(255, 255, 255, 0.7);
+	backdrop-filter: blur(12px);
+	-webkit-backdrop-filter: blur(12px);
+}
+.premium-shadow {
+	box-shadow: 0 10px 40px -10px rgba(0, 104, 121, 0.12);
+}
+.premium-shadow:hover {
+	box-shadow: 0 20px 50px -12px rgba(0, 104, 121, 0.2);
+}
