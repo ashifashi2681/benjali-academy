@@ -23,7 +23,7 @@ function ProgramsOverview2({ id }) {
 						/>
 						<div className="absolute inset-0 bg-gradient-to-t from-black/40 to-transparent"></div>
 						<div className="absolute bottom-4 left-6">
-							<span className="bg-primary-container text-on-primary-container text-xs font-bold uppercase tracking-widest px-3 py-1 rounded-full">
+							<span className="bg-secondary-500 text-background text-xs font-bold uppercase tracking-widest px-3 py-1 rounded-full">
 								Foundation
 							</span>
 						</div>
@@ -60,7 +60,7 @@ function ProgramsOverview2({ id }) {
 						/>
 						<div className="absolute inset-0 bg-gradient-to-t from-black/40 to-transparent"></div>
 						<div className="absolute bottom-4 left-6">
-							<span className="bg-secondary-container text-on-secondary-container text-xs font-bold uppercase tracking-widest px-3 py-1 rounded-full">
+							<span className="bg-secondary-500 text-background text-xs font-bold uppercase tracking-widest px-3 py-1 rounded-full">
 								Expertise
 							</span>
 						</div>

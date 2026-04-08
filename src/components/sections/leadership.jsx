@@ -104,10 +104,7 @@ function Leadership({ id }) {
 								iconPosition="right">
 								Explore Portfolio
 							</Button>
-							<Button
-								variant="outline">
-								View Credentials
-							</Button>
+							<Button variant="outline">View Credentials</Button>
 						</div>
 					</div>
 				</div>
@@ -116,10 +113,8 @@ function Leadership({ id }) {
 			<div className="py-24 overflow-hidden">
 				<div className="grid grid-cols-1 md:grid-cols-2 gap-20 items-center">
 					<div className="space-y-6">
-						<h2 className="text-4xl font-headline font-extrabold tracking-tight">
-							Professional Leadership &amp; Impact
-						</h2>
-						<p className="text-lg text-on-surface-variant leading-relaxed">
+						<Heading>Professional Leadership &amp; Impact</Heading>
+						<p className="main-description">
 							With a career spanning over a decade and a half,
 							Casac has been at the forefront of human capital
 							development. His methodology blends psychological
@@ -130,10 +125,10 @@ function Leadership({ id }) {
 							<div className="flex gap-4">
 								<div className="w-1 bg-primary rounded-full"></div>
 								<div>
-									<h4 className="font-headline font-bold text-on-surface">
+									<Heading as="h5" className="mb-4">
 										Pioneering Adaptive Leadership
-									</h4>
-									<p className="text-on-surface-variant font-body">
+									</Heading>
+									<p className="text-text-secondary text-sm">
 										Implementing frameworks that allow
 										leaders to thrive in volatile,
 										uncertain, complex, and ambiguous (VUCA)
@@ -144,10 +139,11 @@ function Leadership({ id }) {
 							<div className="flex gap-4">
 								<div className="w-1 bg-secondary rounded-full"></div>
 								<div>
-									<h4 className="font-headline font-bold text-on-surface">
+									<Heading as="h5" className="mb-4">
 										Data-Driven Development
-									</h4>
-									<p className="text-on-surface-variant font-body">
+									</Heading>
+
+									<p className="text-text-secondary text-sm">
 										Leveraging quantitative metrics to track
 										and optimize soft-skill progression
 										across global departments.
@@ -157,20 +153,20 @@ function Leadership({ id }) {
 						</div>
 					</div>
 					<div className="relative">
-						<div className="bg-surface-container h-96 rounded-3xl overflow-hidden shadow-inner relative group">
+						<div className="bg-surface h-96 rounded-3xl overflow-hidden shadow-inner relative group">
 							<img
 								alt="Professional setting"
 								className="w-full h-full object-cover grayscale hover:grayscale-0 transition-all duration-700"
 								data-alt="Modern minimalist office interior with floor-to-ceiling windows, sleek furniture, and soft daylight, suggesting high-level corporate leadership"
 								src="https://lh3.googleusercontent.com/aida-public/AB6AXuA2jcJWK8BiR1kfVZyesb9i1gZm02bYhRxgaeQHYjo_9nt4B7nq6ucZCjF5i-5CbyaQKu4kuRXpcIx4ama8zM9NQcT1Xo2Z9hYm5RcOy7X4Vdiqh-zS06s_UuYFUqnMIcc6_1M7LA-4DyIQJuKuNdPBaRbFoBrTTl-pECZ5tWTHQw_A3HHaJI2wagyxhDBdXl-qqm4YtvDlWGNNLfBb5fITLc7BKwI8pRP9lV3v-4ppGusUDr1hfj2usXBZyjVuOs2QVarl8SWVXWdc"
 							/>
-							<div className="absolute inset-0 bg-primary/10 mix-blend-multiply"></div>
+							<div className="absolute inset-0 bg-primary-500/40 mix-blend-multiply pointer-events-none"></div>
 						</div>
 						<div className="absolute top-1/2 -left-10 transform -translate-y-1/2 glass-card p-6 rounded-2xl shadow-2xl border border-white/50 w-48 text-center">
-							<p className="text-primary font-headline text-3xl font-black">
+							<p className="text-text-primary text-base font-black">
 								500+
 							</p>
-							<p className="text-xs uppercase font-label tracking-widest text-outline">
+							<p className="text-xs uppercase tracking-widest">
 								Executives Trained
 							</p>
 						</div>
