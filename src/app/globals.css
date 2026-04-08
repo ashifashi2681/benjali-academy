@@ -10,9 +10,6 @@ html {
 }
 
 @theme {
-	/* =========================
-     PRIMARY (Gold)
-  ========================= */
 	--color-primary-50: #f8f3e3;
 	--color-primary-100: #f1e7c7;
 	--color-primary-200: #e4d08f;
@@ -24,9 +21,6 @@ html {
 	--color-primary-800: #7c5f1e;
 	--color-primary-900: #5e4817;
 
-	/* =========================
-     SECONDARY (Blue)
-  ========================= */
 	--color-secondary-50: #eaf2f9;
 	--color-secondary-100: #d6e4f2;
 	--color-secondary-200: #adc9e5;
@@ -38,15 +32,9 @@ html {
 	--color-secondary-800: #1d4166;
 	--color-secondary-900: #142f4c;
 
-	/* =========================
-     ACCENT
-  ========================= */
 	--color-accent-gold: #e0b94b;
 	--color-accent-blue: #4a8fd1;
 
-	/* =========================
-     NEUTRALS
-  ========================= */
 	--color-background: #f8fafc;
 	--color-surface: #ffffff;
 	--color-muted: #f1f5f9;
@@ -58,17 +46,11 @@ html {
 	--color-text-secondary: #475569;
 	--color-text-muted: #94a3b8;
 
-	/* =========================
-     SEMANTIC
-  ========================= */
 	--color-success: #16a34a;
 	--color-warning: #f59e0b;
 	--color-error: #dc2626;
 	--color-info: #0ea5e9;
 
-	/* =========================
-     GRADIENT
-  ========================= */
 	--gradient-brand: linear-gradient(135deg, #ca9d31, #3471aa);
 }
 

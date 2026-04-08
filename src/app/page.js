@@ -19,8 +19,8 @@ export default function Home() {
 			<Team id={"teams"} />
 			<Leadership id={"leadership"} />
 			<ProgramsOverview2 id={"program-overview"} />
-			{/* <Testimonial2 id={"testimonial2"} /> */}
-			<Testimonial id={"testimonial"} />
+			<Testimonial2 id={"testimonial2"} />
+			{/* <Testimonial id={"testimonial"} /> */}
 			<ContactAndMap id={"contact"} />
 		</main>
 	);

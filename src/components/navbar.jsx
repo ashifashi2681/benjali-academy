@@ -34,7 +34,9 @@ function resolveActiveHref(items, pathname, hash) {
 	const hashValue = hash || "";
 	const routeWithHash = `${pathnameOnly}${hashValue}`;
 
-	const exactMatch = items.find((item) => normalizeHref(item.link) === routeWithHash);
+	const exactMatch = items.find(
+		(item) => normalizeHref(item.link) === routeWithHash
+	);
 	if (exactMatch) return exactMatch.link;
 
 	const routeMatch = items.find((item) => {
@@ -49,6 +51,7 @@ function Navbar() {
 	const pathname = usePathname();
 	const [currentHash, setCurrentHash] = useState("");
 	const [activeHref, setActiveHref] = useState("");
+	const [isNavVisible, setIsNavVisible] = useState(true);
 	const [indicatorStyle, setIndicatorStyle] = useState({
 		opacity: 0,
 		width: 0,
@@ -56,8 +59,13 @@ function Navbar() {
 	});
 	const navListRef = useRef(null);
 	const itemRefs = useRef(new Map());
+	const lastScrollYRef = useRef(0);
 	const normalizedItems = useMemo(
-		() => navData.map((item) => ({ ...item, link: normalizeHref(item.link) })),
+		() =>
+			navData.map((item) => ({
+				...item,
+				link: normalizeHref(item.link),
+			})),
 		[]
 	);
 	const sectionItems = useMemo(
@@ -80,12 +88,16 @@ function Navbar() {
 	}, []);
 
 	useEffect(() => {
-		setActiveHref(resolveActiveHref(normalizedItems, pathname, currentHash));
+		setActiveHref(
+			resolveActiveHref(normalizedItems, pathname, currentHash)
+		);
 	}, [currentHash, normalizedItems, pathname]);
 
 	useEffect(() => {
 		const pathnameOnly = pathname || "/";
-		const observableSections = sectionItems.filter((item) => item.path === pathnameOnly);
+		const observableSections = sectionItems.filter(
+			(item) => item.path === pathnameOnly
+		);
 
 		if (!observableSections.length) return undefined;
 
@@ -106,14 +118,20 @@ function Navbar() {
 
 				if (!visibleSections.size) return;
 
-				const [nextHref] = [...visibleSections.entries()].sort((a, b) => b[1] - a[1])[0];
+				const [nextHref] = [...visibleSections.entries()].sort(
+					(a, b) => b[1] - a[1]
+				)[0];
 				if (!nextHref || nextHref === activeHref) return;
 
 				setActiveHref(nextHref);
 
 				const nextHash = parseHref(nextHref).hash;
 				if (nextHash && nextHash !== window.location.hash) {
-					window.history.replaceState(null, "", `${pathnameOnly}${nextHash}`);
+					window.history.replaceState(
+						null,
+						"",
+						`${pathnameOnly}${nextHash}`
+					);
 					setCurrentHash(nextHash);
 				}
 			},
@@ -168,9 +186,40 @@ function Navbar() {
 		return () => window.removeEventListener("resize", updateIndicator);
 	}, [activeHref]);
 
+	useEffect(() => {
+		const HIDE_OFFSET = 300;
+		const SCROLL_DELTA = 6;
+
+		lastScrollYRef.current = window.scrollY;
+
+		const handleScroll = () => {
+			const currentScrollY = window.scrollY;
+			const delta = currentScrollY - lastScrollYRef.current;
+
+			if (Math.abs(delta) < SCROLL_DELTA) return;
+
+			if (currentScrollY <= 0) {
+				setIsNavVisible(true);
+			} else if (delta > 0 && currentScrollY > HIDE_OFFSET) {
+				setIsNavVisible(false);
+			} else if (delta < 0) {
+				setIsNavVisible(true);
+			}
+
+			lastScrollYRef.current = currentScrollY;
+		};
+
+		window.addEventListener("scroll", handleScroll, { passive: true });
+
+		return () => window.removeEventListener("scroll", handleScroll);
+	}, []);
+
 	return (
-		<nav className="fixed top-0 z-[100] w-full">
-			<div className="mx-auto mt-4 flex w-[min(1440px,calc(100%-24px))] items-center justify-between rounded-[28px] border border-white/60 bg-[rgba(255,255,255,0.72)] px-5 py-4 shadow-[0_20px_60px_rgba(15,23,42,0.08)] backdrop-blur-2xl md:px-8">
+		<nav
+			className={`fixed top-0 z-[100] w-full transition-transform duration-300 ease-out ${
+				isNavVisible ? "translate-y-0" : "-translate-y-full"
+			}`}>
+			<div className="mx-auto flex w-[min(1440px,calc(100%-24px))] items-center justify-between rounded-b-[28px] border border-white/60 bg-[rgba(255,255,255,0.72)] px-5 py-2 shadow-[0_20px_60px_rgba(15,23,42,0.08)] backdrop-blur-2xl md:px-8">
 				<Link
 					href="/"
 					className="text-xl font-extrabold tracking-[-0.08em] text-text-primary transition-transform duration-300 ease-out hover:scale-[1.02]">
@@ -180,10 +229,10 @@ function Navbar() {
 				<div className="hidden items-center gap-3 lg:flex">
 					<div
 						ref={navListRef}
-						className="relative flex items-center rounded-full border border-border/70 bg-muted/70 p-1.5">
+						className="relative flex items-center rounded-full p-1.5">
 						<span
 							aria-hidden="true"
-							className="pointer-events-none absolute top-1.5 bottom-1.5 rounded-full bg-white shadow-[0_10px_30px_rgba(15,23,42,0.08)] transition-[transform,width,opacity] duration-300 ease-out"
+							className="pointer-events-none absolute top-1.5 bottom-1.5 rounded-full bg-white border border-accent-gold/70 shadow-[0_10px_30px_rgba(15,23,42,0.08)] transition-[transform,width,opacity] duration-300 ease-out"
 							style={{
 								opacity: indicatorStyle.opacity,
 								width: `${indicatorStyle.width}px`,
@@ -199,7 +248,10 @@ function Navbar() {
 									key={nav.link}
 									ref={(node) => {
 										if (node) {
-											itemRefs.current.set(nav.link, node);
+											itemRefs.current.set(
+												nav.link,
+												node
+											);
 										} else {
 											itemRefs.current.delete(nav.link);
 										}
@@ -215,7 +267,9 @@ function Navbar() {
 									<span className="inline-flex items-center gap-2">
 										<span
 											className={`h-1.5 w-1.5 rounded-full transition-all duration-300 ease-out ${
-												isActive ? "bg-primary-500 scale-100" : "bg-primary-500/0 scale-75"
+												isActive
+													? "bg-primary-500 scale-100"
+													: "bg-primary-500/0 scale-75"
 											}`}
 										/>
 										{nav.label}
