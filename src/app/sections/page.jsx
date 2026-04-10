@@ -22,6 +22,7 @@ import Service from "@/components/sections/service";
 import StartegicApproch from "@/components/sections/startegicApproch";
 import Team from "@/components/sections/team";
 import Testimonial from "@/components/sections/testimonial";
+import Testimonial2 from "@/components/sections/testimonial2";
 import React from "react";
 
 function Sections() {
@@ -49,6 +50,7 @@ function Sections() {
             <StartegicApproch />
             <Team />
             <Testimonial />
+            <Testimonial2 />
             <ContactAndMap />
 			<Leadership />
 		</>

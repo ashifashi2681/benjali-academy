@@ -8,7 +8,7 @@ function HeroB({id}) {
 	return (
 		<Section id={id} className="-mt-14">
 			<div className="relative overflow-hidden flex items-center">
-				<div className="w-full relative z-10 grid grid-cols-1 lg:grid-cols-12 gap-12 items-center">
+				<div className="w-full relative z-10 grid grid-cols-1 lg:grid-cols-12 gap-12 items-center pt-18 lg:pt-0">
 					<div className="lg:col-span-5 space-y-8">
 						<div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-primary-100 text-primary-800 text-xs font-bold tracking-wider uppercase">
 							<span className="text-sm">
@@ -69,7 +69,7 @@ function HeroB({id}) {
 							</div>
 						</div>
 					</div>
-					<div className="lg:col-span-7 relative flex justify-center items-center h-[600px] lg:h-[800px]">
+					<div className="lg:col-span-7 relative flex justify-center items-center h-[500px] lg:h-[800px]">
 						<div className="relative z-20 w-full h-full flex items-center justify-center">
 							<div className="absolute inset-0 bg-gradient-to-tr from-primary-300 to-accent-blue/60 blur-3xl rounded-full scale-75 animate-pulse"></div>
 							<img
@@ -130,7 +130,7 @@ function HeroB({id}) {
 						<div className="absolute bottom-1/4 right-1/4 w-96 h-96 bg-primary-100 rounded-full blur-3xl -z-10"></div>
 					</div>
 				</div>
-				<div className="absolute bottom-10 left-1/2 -translate-x-1/2 flex flex-col items-start gap-2 opacity-50">
+				<div className="absolute bottom-10 left-1/2 -translate-x-1/2 flex flex-col items-center gap-2 opacity-50">
 					<span className="text-[10px] font-bold tracking-[0.3em] uppercase">
 						Scroll
 					</span>

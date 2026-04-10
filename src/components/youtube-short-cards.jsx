@@ -25,7 +25,7 @@ function YoutubeShortCards() {
 	const iframeRef = useRef(null);
 	const [isPlaying, setIsPlaying] = useState(false);
 	const [volume, setVolume] = useState(25);
-	const shortVideoId = "V87NWLK4m6U";
+	const shortVideoId = "RM485oUuOhg";
 
 	const youtubeEmbedSrc = useMemo(
 		() =>
