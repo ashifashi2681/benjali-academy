@@ -53,7 +53,7 @@ const Card = ({ item }) => (
 );
 function SectionL({ id }) {
 	return (
-		<Section id={id} bg="bgsurface">
+		<Section id={id} bg="bg-surface">
 			<div className="mb-16 text-center">
 				<Heading helperText="Path to Excellence" className="mb-6">
 					Academic Journey
@@ -71,7 +71,7 @@ function SectionL({ id }) {
 					))}
 				</div>
 			</div>
-			<div className="mt-24 grid grid-cols-1 lg:grid-cols-12 gap-8 items-center bg-surface p-8 lg:p-12 rounded-2xl border border-border shadow-sm">
+			<div className="mt-24 grid grid-cols-1 lg:grid-cols-12 gap-8 items-center bg-background p-8 lg:p-12 rounded-2xl border border-border shadow-sm group">
 				<div className="lg:col-span-7">
 					<Heading as="h3" className="mb-4">
 						Milestone Spotlight
@@ -96,7 +96,7 @@ function SectionL({ id }) {
 						</div>
 					</div>
 				</div>
-				<div className="lg:col-span-5 relative group">
+				<div className="lg:col-span-5 relative">
 					<div className="absolute -inset-1 bg-gradient-to-r from-secondary-500 to-primary-500 rounded-xl blur opacity-25 group-hover:opacity-80 transition duration-1000"></div>
 					<img
 						className="relative rounded-xl w-full h-64 object-cover shadow-lg border border-white"
