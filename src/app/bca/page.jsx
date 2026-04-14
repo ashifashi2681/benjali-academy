@@ -1,3 +1,4 @@
+import CoachingPrograms from "@/components/sections/coachingPrograms";
 import Hero from "@/components/sections/hero";
 import Usp from "@/components/sections/usp";
 
@@ -8,6 +9,7 @@ function Bca() {
 		<main>
 			<Hero id={"bca-hero"} />
 			<Usp id={"unique-selling-points"} />
+			<CoachingPrograms id={"coaching-programs"} />
 		</main>
 	);
 }
