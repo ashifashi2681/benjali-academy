@@ -13,6 +13,7 @@ function AdvancedStudies() {
 			<SectionK id={"vacation-cources"} />
 			<Features id={"features"} />
 			<SectionL id={"academic-journey"} />
+			{/* contact and enquiry */}
 			<Testimonial id={"testimonial-adv-stds"} />
 		</main>
   );
