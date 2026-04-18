@@ -9,6 +9,7 @@ import {
 	MdRocketLaunch,
 	MdStarRate,
 } from "react-icons/md";
+import Card from "../ui/card";
 
 const data = [
 	{
@@ -63,12 +64,11 @@ function Achievments({ id }) {
 						leadership programs.
 					</p>
 				</div>
-				{/* gradient fill up and card skew effect */}
 				<div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
 					{data?.map((itm, i) => (
-						<div
+						<Card
 							key={itm.title ?? i}
-							className="hover-gradient-skew group bg-surface p-8 rounded-2xl border border-border shadow-sm flex flex-col">
+							className="hover-gradient-skew group bg-surface border border-border shadow-sm flex flex-col">
 							<div className="mb-4 flex justify-between items-start">
 								<span className="text-text-muted text-lg transition-colors duration-300 group-hover:text-white/90">
 									{itm.icon}
@@ -87,7 +87,7 @@ function Achievments({ id }) {
 									{itm.desc}
 								</p>
 							</div>
-						</div>
+						</Card>
 					))}
 				</div>
 

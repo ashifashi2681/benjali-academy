@@ -8,6 +8,7 @@ import {
 } from "react-icons/md";
 import Heading from "../ui/heading";
 import Button from "../ui/Button";
+import Card from "../ui/card";
 
 function Leadership({ id }) {
 	return (
@@ -68,7 +69,7 @@ function Leadership({ id }) {
 							</p>
 						</div>
 						<div className="grid grid-cols-1 sm:grid-cols-2 gap-6 pt-8">
-							<div className="p-6 rounded-xl bg-surface border border-border/30 hover:shadow-md transition-all">
+							<Card className=" bg-surface border border-border/30 hover:shadow-md transition-all">
 								<span
 									className="text-secondary-500 mb-4 block text-base"
 									data-icon="clinical_notes">
@@ -81,8 +82,9 @@ function Leadership({ id }) {
 									Deep expertise in C-suite behavioral
 									dynamics and strategic alignment.
 								</p>
-							</div>
-							<div className="p-6 rounded-xl bg-surface border border-border/30 hover:shadow-md transition-all">
+							</Card>
+							<Card
+								className="bg-surface border border-border/30 hover:shadow-md transition-all">
 								<span
 									className="text-secondary-500 mb-4 block text-base"
 									data-icon="rocket_launch">
@@ -95,7 +97,7 @@ function Leadership({ id }) {
 									Proven track record in building
 									high-performance cultures for tech unicorns.
 								</p>
-							</div>
+							</Card>
 						</div>
 						<div className="flex flex-wrap gap-4 pt-4">
 							<Button

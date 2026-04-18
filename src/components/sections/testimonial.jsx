@@ -1,6 +1,7 @@
 import React from "react";
 import Section from "../ui/section";
 import Heading from "../ui/heading";
+import Card from "../ui/card";
 
 function Testimonial({id}) {
 	return (
@@ -18,7 +19,7 @@ function Testimonial({id}) {
 					</p>
 				</div>
 				<div className="lg:col-span-2 grid grid-cols-1 md:grid-cols-2 gap-8">
-					<div className="bg-surface p-8 rounded-2xl border border-border shadow-sm">
+					<Card className="bg-surface border border-border shadow-sm">
 						<div className="flex items-center gap-4 mb-8">
 							<img
 								alt="Client portrait"
@@ -39,8 +40,8 @@ function Testimonial({id}) {
 							unmatched. They don't just build sites; they build
 							digital legacies."
 						</p>
-					</div>
-					<div className="bg-surface p-8 rounded-2xl border border-border shadow-sm">
+					</Card>
+					<Card className="bg-surface border border-border shadow-sm">
 						<div className="flex items-center gap-4 mb-8">
 							<img
 								alt="Client portrait"
@@ -62,7 +63,7 @@ function Testimonial({id}) {
 							re-brand. The '' touch is real and remarkably
 							effective."
 						</p>
-					</div>
+					</Card>
 				</div>
 			</div>
 		</Section>

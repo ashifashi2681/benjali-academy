@@ -3,6 +3,7 @@ import Section from "../ui/section";
 import Heading from "../ui/heading";
 import Button from "../ui/Button";
 import { MdArrowForward } from "react-icons/md";
+import Card from "../ui/card";
 
 function ProgramsOverview2({ id }) {
 	return (
@@ -13,7 +14,7 @@ function ProgramsOverview2({ id }) {
 				</Heading>
 			</div>
 			<div className="grid md:grid-cols-2 gap-8 lg:gap-12">
-				<div className="group glass-effect premium-shadow rounded-xl overflow-hidden transition-all duration-500 hover:-translate-y-2 border border-border/40 flex flex-col">
+				<Card haveBody={false} className="group glass-effect premium-shadow overflow-hidden transition-all duration-500 hover:-translate-y-2 border border-border/40 flex flex-col">
 					<div className="relative h-64 overflow-hidden">
 						<img
 							alt="Digital interface concept"
@@ -28,7 +29,7 @@ function ProgramsOverview2({ id }) {
 							</span>
 						</div>
 					</div>
-					<div className="p-8 flex-grow flex flex-col">
+					<Card className="flex-grow flex flex-col">
 						<Heading as="h4" className="mb-4">
 							BCA Program Overview
 						</Heading>
@@ -48,9 +49,10 @@ function ProgramsOverview2({ id }) {
 								View More
 							</Button>
 						</div>
-					</div>
-				</div>
-				<div className="group glass-effect premium-shadow rounded-xl overflow-hidden transition-all duration-500 hover:-translate-y-2 border border-border/40 flex flex-col">
+					</Card>
+				</Card>
+
+				<Card haveBody={false} className="group glass-effect premium-shadow rounded-xl overflow-hidden transition-all duration-500 hover:-translate-y-2 border border-border/40 flex flex-col">
 					<div className="relative h-64 overflow-hidden">
 						<img
 							alt="Advanced technology node"
@@ -65,7 +67,7 @@ function ProgramsOverview2({ id }) {
 							</span>
 						</div>
 					</div>
-					<div className="p-8 flex-grow flex flex-col">
+					<Card className="flex-grow flex flex-col">
 						<Heading as="h4" className="mb-4">
 							Advanced Studies
 						</Heading>
@@ -85,8 +87,8 @@ function ProgramsOverview2({ id }) {
 								View More
 							</Button>
 						</div>
-					</div>
-				</div>
+					</Card>
+				</Card>
 			</div>
 		</Section>
 	);

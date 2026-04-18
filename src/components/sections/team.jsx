@@ -4,6 +4,7 @@ import { FiArrowRight } from "react-icons/fi";
 import Section from "../ui/section";
 import Button from "../ui/Button";
 import Heading from "../ui/heading";
+import Card from "../ui/card";
 
 const people = [
 	{
@@ -78,27 +79,28 @@ const features = [
 function TeamCard({ person }) {
 	return (
 		<figure
-			className="relative h-[230px] w-[130px] shrink-0 overflow-hidden rounded-[24px] shadow-[0_20px_45px_-30px_rgba(15,23,42,0.75)] sm:h-[280px] sm:w-[160px] md:h-[340px] md:w-[195px]"
 			style={{
 				transform: `translateY(${person.shift}px) rotate(${person.rotate}deg)`,
 			}}>
-			<Image
-				src={person.image}
-				alt={person.name}
-				fill
-				sizes="(max-width: 640px) 130px, (max-width: 768px) 160px, 195px"
-				className="object-cover"
-			/>
-			<div className="absolute inset-x-0 bottom-0 h-24 bg-gradient-to-t from-black/80 via-black/45 to-transparent sm:h-28 md:h-32" />
-			<figcaption className="absolute inset-x-0 bottom-0 z-10 px-3 pb-3 text-white sm:px-4 sm:pb-4">
-				<p className="text-xs font-semibold tracking-[0.02em] sm:text-sm md:text-base">
-					{person.name}
-				</p>
-				<p className="text-[10px] text-white/85 sm:text-xs md:text-sm">
-					{person.role}
-				</p>
-			</figcaption>
-			<div className="absolute inset-0 rounded-[24px] ring-1 ring-inset ring-black/10" />
+			<Card haveBody={false} className="relative h-[230px] w-[130px] shrink-0 overflow-hidden shadow-[0_20px_45px_-30px_rgba(15,23,42,0.75)] sm:h-[280px] sm:w-[160px] md:h-[340px] md:w-[195px]">
+				<Image
+					src={person.image}
+					alt={person.name}
+					fill
+					sizes="(max-width: 640px) 130px, (max-width: 768px) 160px, 195px"
+					className="object-cover"
+				/>
+				<div className="absolute inset-x-0 bottom-0 h-24 bg-gradient-to-t from-black/80 via-black/45 to-transparent sm:h-28 md:h-32" />
+				<figcaption className="absolute inset-x-0 bottom-0 z-10 px-3 pb-3 text-white sm:px-4 sm:pb-4">
+					<p className="text-xs font-semibold tracking-[0.02em] sm:text-sm md:text-base">
+						{person.name}
+					</p>
+					<p className="text-[10px] text-white/85 sm:text-xs md:text-sm">
+						{person.role}
+					</p>
+				</figcaption>
+				<div className="absolute inset-0 ring-1 ring-inset ring-black/10" />
+			</Card>
 		</figure>
 	);
 }

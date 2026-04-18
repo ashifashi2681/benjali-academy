@@ -9,6 +9,7 @@ import {
 	MdWork,
 } from "react-icons/md";
 import Button from "../ui/Button";
+import Card from "../ui/card";
 
 const data = [
 	{
@@ -43,8 +44,8 @@ const data = [
 	},
 ];
 
-const Card = ({ item }) => (
-	<div className="bg-surface border border-border rounded-xl overflow-hidden shadow-sm hover:shadow-lg transition-all duration-300 group flex flex-col">
+const Box = ({ item }) => (
+	<Card haveBody={false} className="bg-surface border border-border overflow-hidden shadow-sm hover:shadow-lg transition-all duration-300 group flex flex-col">
 		<div className="relative h-56 overflow-hidden">
 			<img
 				className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
@@ -55,7 +56,7 @@ const Card = ({ item }) => (
 				{item.badge}
 			</div>
 		</div>
-		<div className="p-8 flex flex-col flex-grow">
+		<Card className="flex flex-col flex-grow">
 			<div className="flex items-center gap-2 text-accent-blue font-bold text-xs mb-3">
 				<span className="text-base">
 					<MdSchedule />
@@ -87,8 +88,8 @@ const Card = ({ item }) => (
 					Course Details
 				</Button>
 			</div>
-		</div>
-	</div>
+		</Card>
+	</Card>
 );
 
 function Sectionj({ id }) {
@@ -103,7 +104,7 @@ function Sectionj({ id }) {
 			</p>
 			<div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
 				{data?.map((itm, i) => (
-					<Card key={i} item={itm} />
+					<Box key={i} item={itm} />
 				))}
 			</div>
 			

@@ -2,6 +2,7 @@ import React from "react";
 import Section from "../ui/section";
 import Heading from "../ui/heading";
 import { MdCheckCircle, MdDomain, MdPublic, MdSchool, MdWorkHistory } from "react-icons/md";
+import Card from "../ui/card";
 
 function Features({id}) {
 	return (
@@ -17,7 +18,7 @@ function Features({id}) {
 				</p>
 			</div>
 			<div className="grid grid-cols-1 md:grid-cols-12 gap-6">
-				<div className="md:col-span-8 group relative overflow-hidden bg-surface rounded-xl p-8 border border-border-strong hover:border-primary-400 transition-all duration-300">
+				<Card className="md:col-span-8 group relative overflow-hidden bg-surface border border-border-strong hover:border-primary-400 transition-all duration-300">
 					<div className="flex flex-col h-full justify-between">
 						<div>
 							<div className="w-12 h-12 bg-primary-500 rounded-lg flex items-center justify-center mb-6">
@@ -54,8 +55,8 @@ function Features({id}) {
 							src="https://lh3.googleusercontent.com/aida-public/AB6AXuCHaJYuek6a04AApVLIjt3OROrkrccS7wDjC5CxjNmCDk7yjXH95IqynUmkB49fTzxASbLs5Nni-R0q17fjIVrXar4eRncf6znwlG6-0mUHL_ZtgQVWQXh-7-eZZNNNxxeqyyZUzBqj8iMvUHHTk3ebWgi9B9jAnZhKltoE9x2CqlkvP4mNKCo1z4_XDTJ4rbJnu3n7jOxsw6Nq0lmqhKbv9Q9NXXSPrgvhr1138A0F4VxSAgCvggRlQv8NTZw0cXYxdE5h3Szobk1x"
 						/>
 					</div>
-				</div>
-				<div className="md:col-span-4 bg-secondary-50 rounded-xl p-8 border border-secondary-400 flex flex-col items-start justify-between">
+				</Card>
+				<Card className="md:col-span-4 bg-secondary-50 border border-secondary-400 flex flex-col items-start justify-between">
 					<div>
 						<div className="w-12 h-12 bg-secondary-500 rounded-lg flex items-center justify-center mb-6">
 							<span
@@ -97,8 +98,8 @@ function Features({id}) {
 							</div>
 						</div>
 					</div>
-				</div>
-				<div className="md:col-span-5 bg-secondary-50 rounded-xl p-8 border border-secondary-400 relative overflow-hidden">
+				</Card>
+				<Card className="md:col-span-5 bg-secondary-50 border border-secondary-400 relative overflow-hidden">
 					<div className="relative z-10">
 						<div className="w-12 h-12 bg-secondary-500 rounded-lg flex items-center justify-center mb-6">
 							<span
@@ -133,8 +134,8 @@ function Features({id}) {
 							</li>
 						</ul>
 					</div>
-				</div>
-				<div className="md:col-span-7 bg-surface rounded-xl p-8 border border-border-strong hover:border-primary-400 transition-all duration-300 relative overflow-hidden">
+				</Card>
+				<Card className="md:col-span-7 bg-surface border border-border-strong hover:border-primary-400 transition-all duration-300 relative overflow-hidden">
 					<div className="flex flex-col md:flex-row gap-8 items-start h-full">
 						<div className="flex-1">
 							<div className="w-12 h-12 bg-primary-500 rounded-lg flex items-center justify-center mb-6">
@@ -163,7 +164,7 @@ function Features({id}) {
 							/>
 						</div>
 					</div>
-				</div>
+				</Card>
 			</div>
 		</Section>
 	);

@@ -1,9 +1,10 @@
 import React from "react";
 import Section from "../ui/section";
 import Heading from "../ui/heading";
+import Card from "../ui/card";
 
-const Card = ({ title, desc, month, date, img }) => (
-	<div className="group relative flex flex-col bg-surface rounded-xl overflow-hidden shadow-sm hover:shadow-xl transition-all duration-500 card-zoom border border-border/30">
+const Box = ({ title, desc, month, date, img }) => (
+	<Card haveBody={false} className="group relative flex flex-col bg-surface overflow-hidden shadow-sm hover:shadow-xl transition-all duration-500 card-zoom border border-border/30">
 		<div className="relative h-64 overflow-hidden">
 			<div className="absolute top-4 right-4 z-10 bg-surface/90 backdrop-blur-md px-3 py-1.5 rounded-lg text-center shadow-lg border border-border/20">
 				<span className="block text-xs font-bold text-text-secondary uppercase tracking-tighter">
@@ -20,15 +21,15 @@ const Card = ({ title, desc, month, date, img }) => (
 				src={img}
 			/>
 		</div>
-		<div className="p-6 flex-grow flex flex-col justify-between">
+		<Card className="flex-grow flex flex-col justify-between">
 			<div>
 				<Heading as="h4" className="mb-3">{title}</Heading>
 				<p className="text-text-secondary text-sm font-body leading-relaxed">
 					{desc}
 				</p>
 			</div>
-		</div>
-	</div>
+		</Card>
+	</Card>
 );
 
 function Events({ id }) {
@@ -80,7 +81,7 @@ function Events({ id }) {
 				</div>
 				<div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
 					{data?.map((itm, i) => (
-						<Card
+						<Box
 							key={i}
 							title={itm.title}
 							desc={itm.desc}

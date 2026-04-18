@@ -3,6 +3,7 @@ import Section from "../ui/section";
 import Heading from "../ui/heading";
 import { MdSchedule } from "react-icons/md";
 import Button from "../ui/Button";
+import Card from "../ui/card";
 
 const data = [
 	{
@@ -28,8 +29,8 @@ const data = [
 	},
 ];
 
-const Card = ({ item }) => (
-	<div className="group bg-surface border border-border rounded-lg overflow-hidden flex flex-col shadow-sm hover:shadow-xl transition-all duration-300">
+const Box = ({ item }) => (
+	<Card haveBody={false} className="group bg-surface border border-border overflow-hidden flex flex-col shadow-sm hover:shadow-xl transition-all duration-300">
 		<div className="relative h-64 overflow-hidden">
 			<img
 				className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110"
@@ -40,7 +41,7 @@ const Card = ({ item }) => (
 				{item.badge}
 			</div>
 		</div>
-		<div className="p-8 flex flex-col flex-grow">
+		<Card className="flex flex-col flex-grow">
 			<div className="flex items-center gap-2 text-accent-blue mb-3">
 				<span className="text-base">
 					<MdSchedule />
@@ -58,8 +59,8 @@ const Card = ({ item }) => (
 			<Button variant="gradient" color="secondary-500">
 				Learn More
 			</Button>
-		</div>
-	</div>
+		</Card>
+	</Card>
 );
 
 function SectionK({id}) {
@@ -75,7 +76,7 @@ function SectionK({id}) {
 			</p>
 			<div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
 				{data?.map((itm, i) => (
-					<Card key={i} item={itm} />
+					<Box key={i} item={itm} />
 				))}
 			</div>
 		</Section>

@@ -9,6 +9,7 @@ import {
 	MdRocketLaunch,
 } from "react-icons/md";
 import Button from "../ui/Button";
+import Card from "../ui/card";
 
 const data = [
 	{
@@ -50,11 +51,13 @@ function CoachingPrograms({ id }) {
 			</div>
 			<div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
 				{data?.map((itm, i) => (
-					<div
+					<Card
 						key={i}
-						className="group relative bg-surface/70 p-8 rounded-xl border border-border transition-all duration-300 hover:-translate-y-2 hover:shadow-xl hover:shadow-primary-500/30 flex flex-col">
+						className="group relative bg-surface/70 border border-border transition-all duration-300 hover:-translate-y-2 hover:shadow-xl hover:shadow-primary-500/30 flex flex-col">
 						<div className="w-14 h-14 bg-white rounded-lg flex items-center justify-center mb-6 shadow-sm group-hover:scale-110 transition-transform duration-300">
-							<span className="text-primary-600 text-lg" data-icon="">
+							<span
+								className="text-primary-600 text-lg"
+								data-icon="">
 								{itm.icon}
 							</span>
 						</div>
@@ -70,25 +73,27 @@ function CoachingPrograms({ id }) {
 								<MdArrowForward />
 							</span>
 						</div>
-					</div>
+					</Card>
 				))}
 			</div>
 
-			<div className="bg-secondary-800 rounded-3xl mt-10 p-8 flex flex-col md:flex-row items-center justify-between gap-8">
-				<div className="text-center md:text-left">
-					<h2 className="text-base font-bold text-white mb-2">
-						Ready to accelerate your journey?
-					</h2>
-					<p className="text-slate-400 text-sm">
-						Join 500+ successful founders who have scaled their
-						ventures with our coaching.
-					</p>
+			<Card className="bg-secondary-800 mt-10">
+				<div className="flex flex-col md:flex-row items-center justify-between gap-8">
+					<div className="text-center md:text-left">
+						<h2 className="text-base font-bold text-white mb-2">
+							Ready to accelerate your journey?
+						</h2>
+						<p className="text-slate-400 text-sm">
+							Join 500+ successful founders who have scaled their
+							ventures with our coaching.
+						</p>
+					</div>
+					<div className="flex flex-col sm:flex-row gap-4">
+						<Button variant="outline">Book Strategy Call</Button>
+						<Button variant="gradient">View Syllabus</Button>
+					</div>
 				</div>
-				<div className="flex flex-col sm:flex-row gap-4">
-					<Button variant="outline">Book Strategy Call</Button>
-					<Button variant="gradient">View Syllabus</Button>
-				</div>
-			</div>
+			</Card>
 		</Section>
 	);
 }

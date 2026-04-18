@@ -2,6 +2,7 @@ import React from "react";
 import Section from "../ui/section";
 import Heading from "../ui/heading";
 import { MdArrowOutward } from "react-icons/md";
+import Card from "../ui/card";
 
 function DevelopmentPrograms({ id }) {
 	const data = [
@@ -44,9 +45,9 @@ function DevelopmentPrograms({ id }) {
 
 				<div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
 					{data?.map((itm, i) => (
-						<div
+						<Card
 							key={i}
-							className={`group relative flex flex-col p-8 rounded-3xl shadow-sm hover-lift border transition-all duration-300 ${itm.class}`}>
+							className={`group relative flex flex-col shadow-sm hover-lift border transition-all duration-300 ${itm.class}`}>
 							<div className="flex justify-between items-start mb-8">
 								<span className="inline-flex items-center justify-center w-10 h-10 rounded-full bg-surface text-text-secondary shadow-md font-bold text-sm">
 									0{Number(i + 1)}
@@ -63,7 +64,7 @@ function DevelopmentPrograms({ id }) {
 								real-world scenarios and immersive coaching
 								techniques.
 							</p>
-						</div>
+						</Card>
 					))}
 				</div>
 			</div>

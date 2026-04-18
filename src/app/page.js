@@ -1,5 +1,4 @@
 import ContactAndMap from "@/components/sections/contactAndMap";
-import Testimonial from "@/components/sections/testimonial";
 import Service from "@/components/sections/service";
 import Events from "./../components/sections/events";
 import AboutUs from "@/components/sections/aboutUs";
@@ -20,7 +19,6 @@ export default function Home() {
 			<Leadership id={"leadership"} />
 			<ProgramsOverview2 id={"program-overview"} />
 			<Testimonial2 id={"testimonial2"} />
-			{/* <Testimonial id={"testimonial"} /> */}
 			<ContactAndMap id={"contact"} />
 		</main>
 	);

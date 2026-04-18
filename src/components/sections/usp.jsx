@@ -3,6 +3,7 @@ import Section from "../ui/section";
 import Heading from "../ui/heading";
 import { MdAccountBalance, MdArrowForward, MdGroups, MdLanguage, MdModelTraining, MdPublic } from "react-icons/md";
 import Button from "../ui/Button";
+import Card from "../ui/card";
 
 function Usp({ id }) {
 	return (
@@ -23,40 +24,42 @@ function Usp({ id }) {
 
 			<div className="grid grid-cols-1 md:grid-cols-12 gap-8 perspective-1000">
 				<div className="md:col-span-8 group perspective-1000">
-					<div className="card-lift h-full bg-surface p-10 rounded-2xl border border-border flex flex-col md:flex-row gap-10 overflow-hidden relative">
-						<div className="flex-1 z-10">
-							<div className="w-14 h-14 rounded-full bg-accent-gold/30 flex items-center justify-center mb-6 text-primary-700">
-								<span
-									className="text-md"
-									data-icon="account_balance">
-									<MdAccountBalance />
-								</span>
+					<Card className="card-lift h-full bg-surface border border-border overflow-hidden ">
+						<div className="h-full relative flex flex-col md:flex-row gap-10">
+							<div className="flex-1 z-10">
+								<div className="w-14 h-14 rounded-full bg-accent-gold/30 flex items-center justify-center mb-6 text-primary-700">
+									<span
+										className="text-md"
+										data-icon="account_balance">
+										<MdAccountBalance />
+									</span>
+								</div>
+								<Heading as="h3" className="mb-4">
+									Industry-Aligned
+									<br />
+									Curriculum
+								</Heading>
+								<p className="main-description reveal-content">
+									Our modules are co-developed with Fortune
+									500 executives to ensure every lesson
+									addresses real-world market demands and
+									emerging technological shifts.
+								</p>
 							</div>
-							<Heading as="h3" className="mb-4">
-								Industry-Aligned
-								<br />
-								Curriculum
-							</Heading>
-							<p className="main-description reveal-content">
-								Our modules are co-developed with Fortune 500
-								executives to ensure every lesson addresses
-								real-world market demands and emerging
-								technological shifts.
-							</p>
+							<div className="flex-1 relative min-h-[300px] md:min-h-full rounded-2xl overflow-hidden shadow-2xl">
+								<img
+									className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110"
+									data-alt="data analytics tablet"
+									src="https://lh3.googleusercontent.com/aida-public/AB6AXuA3FmMldV2JsOxNl2EXG51moCrw824TCz8ChvmWNwD6KvKez9OT1EWy7cVhlQ_HG-idBoENA3Y0gwW5oLVPYowji-_86ozpmdqE5i9J2QJNAv3CuNRi6E3M1HPPSrlgv8x_HvCkrxeLhdMmJquEepvW5zTobpS7Z0oC4OI1jEaNCD9pS8aCzILEYSyl1QeLgSqNAz9q1suIGgFiMtsldti5uuPJzds-f1G47vauZdRBKF7Ui-7hjmTFRGWb2jIyKCsBpc79qfZ4dCzM"
+								/>
+								<div className="absolute inset-0 bg-gradient-to-tr from-primary/20 to-transparent"></div>
+							</div>
 						</div>
-						<div className="flex-1 relative min-h-[300px] md:min-h-full rounded-2xl overflow-hidden shadow-2xl">
-							<img
-								className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110"
-								data-alt="data analytics tablet"
-								src="https://lh3.googleusercontent.com/aida-public/AB6AXuA3FmMldV2JsOxNl2EXG51moCrw824TCz8ChvmWNwD6KvKez9OT1EWy7cVhlQ_HG-idBoENA3Y0gwW5oLVPYowji-_86ozpmdqE5i9J2QJNAv3CuNRi6E3M1HPPSrlgv8x_HvCkrxeLhdMmJquEepvW5zTobpS7Z0oC4OI1jEaNCD9pS8aCzILEYSyl1QeLgSqNAz9q1suIGgFiMtsldti5uuPJzds-f1G47vauZdRBKF7Ui-7hjmTFRGWb2jIyKCsBpc79qfZ4dCzM"
-							/>
-							<div className="absolute inset-0 bg-gradient-to-tr from-primary/20 to-transparent"></div>
-						</div>
-					</div>
+					</Card>
 				</div>
 
 				<div className="md:col-span-4 group">
-					<div className="card-lift h-full bg-surface p-10 rounded-2xl border border-border flex flex-col">
+					<Card className="card-lift h-full bg-surface border border-border flex flex-col">
 						<div className="w-14 h-14 rounded-full bg-accent-blue/30 flex items-center justify-center mb-6 text-secondary-700">
 							<span className="text-md" data-icon="groups">
 								<MdGroups />
@@ -103,11 +106,11 @@ function Usp({ id }) {
 								</div>
 							</div>
 						</div>
-					</div>
+					</Card>
 				</div>
 
 				<div className="md:col-span-5 group">
-					<div className="card-lift h-full bg-secondary-500 text-white p-12 rounded-2xl shadow-xl flex flex-col justify-between relative overflow-hidden">
+					<Card className="card-lift h-full bg-secondary-500 text-white shadow-xl flex flex-col justify-between relative overflow-hidden">
 						<div className="relative z-10">
 							<div className="w-14 h-14 rounded-full bg-white/10 backdrop-blur-md flex items-center justify-center mb-10">
 								<span className="text-md" data-icon="public">
@@ -138,11 +141,11 @@ function Usp({ id }) {
 								<MdLanguage />
 							</span>
 						</div>
-					</div>
+					</Card>
 				</div>
 
 				<div className="md:col-span-7 group">
-					<div className="card-lift h-full bg-surface p-10 rounded-2xl border border-border flex flex-col justify-between overflow-hidden">
+					<Card className="card-lift h-full bg-surface border border-border flex flex-col justify-between overflow-hidden">
 						<div className="flex flex-col md:flex-row gap-12">
 							<div className="md:w-1/2">
 								<div className="w-14 h-14 rounded-full bg-accent-gold/30 flex items-center justify-center mb-10 text-primary-700">
@@ -172,7 +175,7 @@ function Usp({ id }) {
 								<div className="absolute inset-0 bg-gradient-to-t from-black/40 to-transparent"></div>
 							</div>
 						</div>
-					</div>
+					</Card>
 				</div>
 			</div>
 		</Section>
