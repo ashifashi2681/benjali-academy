@@ -68,6 +68,7 @@ html {
 	--text-xxxxl: clamp(47.77px, 2.19vi + 40.77px, 72.48px);
 	--text-xxxxxl: clamp(57.33px, 2.91vi + 48.03px, 90.6px);
 }
+
 .main-description {
 	@apply text-text-secondary text-base leading-relaxed max-w-xl;
 }
@@ -207,4 +208,54 @@ body {
 }
 .premium-shadow:hover {
 	box-shadow: 0 20px 50px -12px rgba(0, 104, 121, 0.2);
+}
+
+.hover-gradient-skew {
+	position: relative;
+	overflow: hidden;
+	isolation: isolate;
+	transform-origin: center;
+	transition: transform 480ms cubic-bezier(0.22, 1, 0.36, 1),
+		box-shadow 480ms cubic-bezier(0.22, 1, 0.36, 1),
+		border-color 480ms cubic-bezier(0.22, 1, 0.36, 1);
+}
+
+.hover-gradient-skew::before {
+	content: "";
+	position: absolute;
+	inset: 0;
+	z-index: 0;
+	background: linear-gradient(
+		180deg,
+		color-mix(in srgb, var(--color-primary-200) 92%, white) 0%,
+		color-mix(in srgb, var(--color-secondary-600) 85%, white) 100%
+	);
+	transform: scaleY(0);
+	transform-origin: bottom;
+	transition: transform 520ms cubic-bezier(0.22, 1, 0.36, 1);
+}
+
+.hover-gradient-skew:hover {
+	transform: translateY(-10px) skewX(-1.5deg) skewY(-0.6deg);
+	box-shadow: 0 28px 52px -24px rgba(15, 23, 42, 0.42);
+	border-color: color-mix(in srgb, var(--color-primary-300) 55%, white);
+}
+
+.hover-gradient-skew:hover::before {
+	transform: scaleY(1);
+}
+
+.hover-gradient-skew > * {
+	position: relative;
+	z-index: 1;
+}
+
+@media (prefers-reduced-motion: reduce) {
+	.hover-gradient-skew,
+	.hover-gradient-skew::before {
+		transition: none;
+	}
+	.hover-gradient-skew:hover {
+		transform: none;
+	}
 }
