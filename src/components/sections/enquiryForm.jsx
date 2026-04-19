@@ -3,6 +3,9 @@ import Section from "../ui/section";
 import Heading from "../ui/heading";
 import Button from "../ui/Button";
 import Card from "../ui/card";
+import Input from "../ui/input";
+import Select from "../ui/select";
+import TextArea from "../ui/textArea";
 
 const courses = [
 	"Advanced Studies Program",
@@ -11,12 +14,13 @@ const courses = [
 	"Data Analytics and AI Foundations",
 	"UI/UX and Product Design",
 	"Corporate Leadership Coaching",
+	"Others",
 ];
 
 function EnquiryForm({ id }) {
 	return (
 		<Section id={id}>
-			<div className="relative overflow-hidden rounded-[1.8rem] border border-border/70 bg-[linear-gradient(160deg,#f8fafc_0%,#ffffff_38%,#f2f7ff_100%)] p-5 sm:p-7 md:p-10 lg:p-12 shadow-[0_30px_80px_-48px_rgba(15,23,42,0.35)]">
+			<Card className="relative overflow-hidden rounded-[1.8rem] border border-border/70 bg-[linear-gradient(160deg,#f8fafc_0%,#ffffff_38%,#f2f7ff_100%)] shadow-[0_30px_80px_-48px_rgba(15,23,42,0.35)]">
 				<div className="pointer-events-none absolute -right-16 -top-16 h-48 w-48 rounded-full bg-secondary-200/40 blur-3xl" />
 				<div className="pointer-events-none absolute -bottom-12 -left-12 h-40 w-40 rounded-full bg-primary-200/45 blur-3xl" />
 
@@ -42,136 +46,101 @@ function EnquiryForm({ id }) {
 
 					<form className="lg:col-span-7 grid grid-cols-1 gap-4 sm:grid-cols-2 sm:gap-5">
 						<div className="sm:col-span-1">
-							<label
-								htmlFor="fullName"
-								className="mb-2 block text-xs font-semibold uppercase tracking-[0.12em] text-text-muted">
-								Full Name
-							</label>
-							<input
-								id="fullName"
+							<Input
 								name="fullName"
-								type="text"
 								placeholder="Enter your full name"
-								className="w-full rounded-2xl border border-border bg-white/85 px-4 py-3.5 text-sm text-text-primary shadow-[inset_0_1px_0_rgba(255,255,255,0.9)] outline-none transition-all duration-200 placeholder:text-text-muted/80 focus:border-secondary-400 focus:bg-white focus:ring-4 focus:ring-secondary-100/70"
+								label="Full Name"
+								required={true}
 							/>
 						</div>
 						<div className="sm:col-span-1">
-							<label
-								htmlFor="email"
-								className="mb-2 block text-xs font-semibold uppercase tracking-[0.12em] text-text-muted">
-								Email Address
-							</label>
-							<input
-								id="email"
+							<Input
 								name="email"
-								type="email"
 								placeholder="you@example.com"
-								className="w-full rounded-2xl border border-border bg-white/85 px-4 py-3.5 text-sm text-text-primary shadow-[inset_0_1px_0_rgba(255,255,255,0.9)] outline-none transition-all duration-200 placeholder:text-text-muted/80 focus:border-secondary-400 focus:bg-white focus:ring-4 focus:ring-secondary-100/70"
+								label="Email Address"
+								required={true}
 							/>
 						</div>
 						<div className="sm:col-span-1">
-							<label
-								htmlFor="phone"
-								className="mb-2 block text-xs font-semibold uppercase tracking-[0.12em] text-text-muted">
-								Phone Number
-							</label>
-							<input
-								id="phone"
+							<Input
 								name="phone"
 								type="tel"
-								placeholder="+91 98765 43210"
-								className="w-full rounded-2xl border border-border bg-white/85 px-4 py-3.5 text-sm text-text-primary shadow-[inset_0_1px_0_rgba(255,255,255,0.9)] outline-none transition-all duration-200 placeholder:text-text-muted/80 focus:border-secondary-400 focus:bg-white focus:ring-4 focus:ring-secondary-100/70"
+								placeholder="+910000000000"
+								label="Phone Number"
+								required={true}
 							/>
 						</div>
 						<div className="sm:col-span-1">
-							<label
-								htmlFor="city"
-								className="mb-2 block text-xs font-semibold uppercase tracking-[0.12em] text-text-muted">
-								City
-							</label>
-							<input
-								id="city"
+							<Input
 								name="city"
-								type="text"
-								placeholder="Your city"
-								className="w-full rounded-2xl border border-border bg-white/85 px-4 py-3.5 text-sm text-text-primary shadow-[inset_0_1px_0_rgba(255,255,255,0.9)] outline-none transition-all duration-200 placeholder:text-text-muted/80 focus:border-secondary-400 focus:bg-white focus:ring-4 focus:ring-secondary-100/70"
+								placeholder="Calicut"
+								label="City"
+								required={true}
 							/>
 						</div>
 
 						<div className="sm:col-span-2">
-							<label
-								htmlFor="course"
-								className="mb-2 block text-xs font-semibold uppercase tracking-[0.12em] text-text-muted">
-								Preferred Course
-							</label>
-							<select
-								id="course"
+							<Select
 								name="course"
-								defaultValue=""
-								className="w-full appearance-none rounded-2xl border border-border bg-[linear-gradient(180deg,#ffffff,#f8fafc)] px-4 py-3.5 text-sm text-text-primary outline-none transition-all duration-200 focus:border-secondary-400 focus:ring-4 focus:ring-secondary-100/70">
-								<option value="" disabled>
-									Select a course
-								</option>
-								{courses.map((course) => (
-									<option key={course} value={course}>
-										{course}
-									</option>
-								))}
-							</select>
+								label="Preferred Course"
+								placeholder="Select a course"
+								options={courses}
+							/>
 						</div>
 
 						<div className="sm:col-span-1">
-							<label
-								htmlFor="mode"
-								className="mb-2 block text-xs font-semibold uppercase tracking-[0.12em] text-text-muted">
-								Learning Mode
-							</label>
-							<select
-								id="mode"
+							<Select
 								name="mode"
-								defaultValue=""
-								className="w-full appearance-none rounded-2xl border border-border bg-[linear-gradient(180deg,#ffffff,#f8fafc)] px-4 py-3.5 text-sm text-text-primary outline-none transition-all duration-200 focus:border-secondary-400 focus:ring-4 focus:ring-secondary-100/70">
-								<option value="" disabled>
-									Select mode
-								</option>
-								<option value="online">Online</option>
-								<option value="offline">Offline</option>
-								<option value="hybrid">Hybrid</option>
-							</select>
+								label="Learning Mode"
+								placeholder="Select mode"
+								options={[
+									{
+										value: "online",
+										label: "Online",
+									},
+									{
+										value: "offline",
+										label: "Offline",
+									},
+									{
+										value: "hybrid",
+										label: "Hybrid",
+									},
+									{
+										value: "later",
+										label: "Choose Later",
+									},
+								]}
+							/>
 						</div>
 
 						<div className="sm:col-span-1">
-							<label
-								htmlFor="timeline"
-								className="mb-2 block text-xs font-semibold uppercase tracking-[0.12em] text-text-muted">
-								Joining Timeline
-							</label>
-							<select
-								id="timeline"
+							<Select
 								name="timeline"
-								defaultValue=""
-								className="w-full appearance-none rounded-2xl border border-border bg-[linear-gradient(180deg,#ffffff,#f8fafc)] px-4 py-3.5 text-sm text-text-primary outline-none transition-all duration-200 focus:border-secondary-400 focus:ring-4 focus:ring-secondary-100/70">
-								<option value="" disabled>
-									Select timeline
-								</option>
-								<option value="immediate">Immediate</option>
-								<option value="1-3-months">In 1 to 3 months</option>
-								<option value="later">Exploring for later</option>
-							</select>
+								label="Joining Timeline"
+								placeholder="Select timeline"
+								options={[
+									{
+										value: "1-3-months",
+										label: "In 1 to 3 months",
+									},
+									{
+										value: "immediate",
+										label: "Immediate",
+									},
+									{
+										value: "later",
+										label: "Exploring for later",
+									},
+								]}
+							/>
 						</div>
 
 						<div className="sm:col-span-2">
-							<label
-								htmlFor="message"
-								className="mb-2 block text-xs font-semibold uppercase tracking-[0.12em] text-text-muted">
-								Your Enquiry
-							</label>
-							<textarea
-								id="message"
+							<TextArea
 								name="message"
-								rows={5}
+								label="Your Enquiry"
 								placeholder="Tell us about your background, goals, and preferred schedule."
-								className="w-full resize-y rounded-2xl border border-border bg-white/85 px-4 py-3.5 text-sm text-text-primary shadow-[inset_0_1px_0_rgba(255,255,255,0.9)] outline-none transition-all duration-200 placeholder:text-text-muted/80 focus:border-secondary-400 focus:bg-white focus:ring-4 focus:ring-secondary-100/70"
 							/>
 						</div>
 
@@ -186,13 +155,16 @@ function EnquiryForm({ id }) {
 						</label>
 
 						<div className="sm:col-span-2 pt-1">
-							<Button type="submit" size="lg" className="w-full sm:w-auto">
+							<Button
+								type="submit"
+								size="lg"
+								className="w-full sm:w-auto">
 								Send Enquiry
 							</Button>
 						</div>
 					</form>
 				</div>
-			</div>
+			</Card>
 		</Section>
 	);
 }
