@@ -75,6 +75,8 @@ const variantClasses = {
 		"border border-[color:var(--btn-border)] bg-[var(--btn-outline-bg)] text-[var(--btn-outline-text)] shadow-[0_10px_24px_-18px_var(--btn-outline-shadow)] hover:border-[color:var(--btn-border-hover)] hover:bg-[var(--btn-outline-bg-hover)] hover:text-[var(--btn-outline-text-hover)] hover:shadow-[0_16px_34px_-20px_var(--btn-shadow)]",
 	gradient:
 		"border border-[color:var(--btn-border)] bg-[linear-gradient(135deg,var(--btn-bg),var(--btn-bg-soft),var(--btn-bg-tint))] text-[var(--btn-text)] shadow-[0_16px_38px_-18px_var(--btn-shadow)] hover:brightness-105 hover:shadow-[0_22px_44px_-20px_var(--btn-shadow-strong)]",
+	link:
+		"!h-auto !rounded-none !px-0 !py-0 border border-transparent bg-transparent text-[var(--btn-link-text)] shadow-none hover:bg-transparent hover:text-[var(--btn-link-text-hover)] hover:shadow-none hover:translate-y-0 active:translate-y-0 active:scale-100 underline-offset-[0.22em] decoration-2 decoration-transparent hover:decoration-current",
 };
 
 const Button = forwardRef(function Button(
@@ -122,6 +124,8 @@ const Button = forwardRef(function Button(
 		"--btn-outline-text": `color-mix(in srgb, ${resolvedColor} 68%, black)`,
 		"--btn-outline-text-hover": `color-mix(in srgb, ${resolvedColor} 78%, black)`,
 		"--btn-outline-shadow": "rgba(15,23,42,0.16)",
+		"--btn-link-text": `color-mix(in srgb, ${resolvedColor} 80%, black)`,
+		"--btn-link-text-hover": `color-mix(in srgb, ${resolvedColor} 94%, black)`,
 		...style,
 	};
 

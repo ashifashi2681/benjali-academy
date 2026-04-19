@@ -67,12 +67,14 @@ function CoachingPrograms({ id }) {
 						<p className="text-text-secondary text-sm leading-relaxed">
 							{itm.desc}
 						</p>
-						<div className="mt-3 flex items-center text-primary-600 font-semibold text-xs uppercase tracking-wider group-hover:gap-2 transition-all">
-							Learn More{" "}
-							<span className="text-sm" data-icon="arrow_forward">
-								<MdArrowForward />
-							</span>
-						</div>
+						<Button
+							className="mt-3"
+							size="sm"
+							variant="link"
+							icon={<MdArrowForward />}
+							iconPosition="right">
+							Learn More
+						</Button>
 					</Card>
 				))}
 			</div>
