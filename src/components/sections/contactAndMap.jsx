@@ -3,15 +3,14 @@ import Section from "../ui/section";
 import Heading from "../ui/heading";
 import { MdCall, MdExpandMore, MdMail } from "react-icons/md";
 import Button from "../ui/Button";
-import Card from "../ui/card";
 import Input from "../ui/input";
 import Select from "../ui/select";
 import TextArea from "../ui/textArea";
 
 function ContactAndMap({ id }) {
 	return (
-		<Section id={id} bg="bg-secondary-50">
-			<Card className="relative overflow-hidden border border-border/70 bg-[linear-gradient(160deg,#f8fafc_0%,#ffffff_38%,#f2f7ff_100%)] shadow-[0_30px_80px_-48px_rgba(15,23,42,0.35)]">
+		<Section id={id} bg="bg-secondary-50/20">
+			<div className="relative">
 				<div className="pointer-events-none absolute -right-16 -top-16 h-48 w-48 rounded-full bg-secondary-200/40 blur-3xl" />
 				<div className="pointer-events-none absolute -bottom-12 -left-12 h-40 w-40 rounded-full bg-primary-200/45 blur-3xl" />
 
@@ -139,7 +138,7 @@ function ContactAndMap({ id }) {
 						</div>
 					</form>
 				</div>
-			</Card>
+			</div>
 		</Section>
 	);
 }
