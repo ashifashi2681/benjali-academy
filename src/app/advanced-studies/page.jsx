@@ -1,3 +1,4 @@
+import EnquiryForm from '@/components/sections/enquiryForm';
 import Features from '@/components/sections/features';
 import HeroC from '@/components/sections/heroC'
 import Sectionj from '@/components/sections/sectionj';
@@ -13,7 +14,7 @@ function AdvancedStudies() {
 			<SectionK id={"vacation-cources"} />
 			<Features id={"features"} />
 			<SectionL id={"academic-journey"} />
-			{/* contact and enquiry */}
+			<EnquiryForm />
 			<Testimonial id={"testimonial-adv-stds"} />
 		</main>
   );
