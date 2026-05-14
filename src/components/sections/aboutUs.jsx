@@ -40,7 +40,7 @@ function AboutUs({ id, data }) {
 					</Heading>
 					<p
 						className="main-description"
-						dangerouslySetInnerHTML={{ __html: data?.desc2 }}
+						dangerouslySetInnerHTML={{ __html: data?.desc2 || "" }}
 					/>
 
 					<div className="grid grid-cols-1 sm:grid-cols-2 gap-6 pt-4">
