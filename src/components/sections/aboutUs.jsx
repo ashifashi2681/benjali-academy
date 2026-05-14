@@ -3,53 +3,44 @@ import Section from "../ui/section";
 import Heading from "../ui/heading";
 import { MdBrush, MdSpeed } from "react-icons/md";
 
-function AboutUs({ id }) {
+function AboutUs({ id, data }) {
 	return (
 		<Section id={id} bg="bg-surface">
 			<div className="grid grid-cols-1 lg:grid-cols-2 gap-20 items-start">
 				<div className="">
-					<Heading helperText="Mission & vission" className="mb-6">
-						Measured success in every pixel.
+					<Heading helperText={data?.hint} className="mb-6">
+						{data?.title}
 					</Heading>
 
-					<p className="main-description mb-12">
-						We don't just design; we architect growth. Our
-						methodology ensures that aesthetic appeal translates
-						directly into user retention and conversion.
-					</p>
-					<div className="grid grid-cols-2 gap-8">
-						<div>
-							<p className="text-xxl font-extrabold text-secondary-500">
-								120+
-							</p>
-							<p className="text-sm font-bold uppercase tracking-widest text-text-secondary">
-								Clients served
-							</p>
-						</div>
-						<div>
-							<p className="text-xxl font-extrabold text-secondary-500">
-								98%
-							</p>
-							<p className="text-sm font-bold uppercase tracking-widest text-text-secondary">
-								Satisfaction
-							</p>
-						</div>
+					<p className="main-description mb-12">{data?.desc}</p>
+					<div className="grid grid-cols-1 sm:grid-cols-2 gap-4 sm:gap-5">
+						{data?.missions?.map((itm, i) => (
+							<div
+								key={i}
+								className="relative rounded-2xl border border-primary-200/60 bg-surface p-4 sm:p-5 premium-shadow transition-all duration-300 hover:-translate-y-1 overflow-hidden">
+								<p className="text-sm font-medium text-text-primary leading-relaxed">
+									<span className="inline-flex h-6 min-w-6 items-center justify-center rounded-full bg-primary-100 px-2 mr-2 text-xs font-bold text-primary-800">
+										{i + 1}
+									</span>
+									{itm}
+								</p>
+								<span className="pointer-events-none absolute inset-x-0 bottom-0 h-0.5 rounded-b-2xl bg-gradient-to-r from-primary-400 to-secondary-500" />
+							</div>
+						))}
 					</div>
 				</div>
 
 				<div className="space-y-8">
-					<Heading helperText="about us">
-						We define the standard for{" "}
+					<Heading helperText={data?.hint2}>
+						{data?.title2}{" "}
 						<span className="underline decoration-accent-blue/50 underline-offset-8">
-							modern excellence
+							{data?.titleHiglight}
 						</span>
 						.
 					</Heading>
-					<p className="main-description">
-						Beyond aesthetics, we engineering digital environments
-						that breathe. Our approach combines architectural
-						structuralism with fluid user psychology, creating
-						interfaces that aren't just seen—they're felt.
+					<p
+						className="main-description"
+						dangerouslySetInnerHTML={{ __html: data?.desc2 }}>
 					</p>
 					<div className="grid grid-cols-1 sm:grid-cols-2 gap-6 pt-4">
 						<div className="flex items-center gap-4 p-4 rounded-2xl bg-background">
@@ -112,3 +103,23 @@ export default AboutUs;
 		</div>
 	</div>
 </div> */
+
+
+/* 
+<div>
+							<p className="text-xxl font-extrabold text-secondary-500">
+								120+
+							</p>
+							<p className="text-sm font-bold uppercase tracking-widest text-text-secondary">
+								Clients served
+							</p>
+						</div>
+						<div>
+							<p className="text-xxl font-extrabold text-secondary-500">
+								98%
+							</p>
+							<p className="text-sm font-bold uppercase tracking-widest text-text-secondary">
+								Satisfaction
+							</p>
+						</div>
+*/

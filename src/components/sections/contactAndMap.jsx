@@ -6,6 +6,7 @@ import Button from "../ui/Button";
 import Input from "../ui/input";
 import Select from "../ui/select";
 import TextArea from "../ui/textArea";
+import { saveToSheet } from "@/app/actions/saveToSheet";
 
 function ContactAndMap({ id }) {
 	return (
@@ -44,7 +45,7 @@ function ContactAndMap({ id }) {
 							</a>
 						</div>
 						<div className="flex-grow mt-auto">
-							<div className="w-full h-80 rounded-3xl overflow-hidden relative border border-border group grayscale hover:grayscale-0 transition-all duration-700">
+							<div className="w-full h-80 rounded-xl md:rounded-3xl overflow-hidden relative border border-border group grayscale hover:grayscale-0 transition-all duration-700">
 								<iframe
 									allowFullScreen=""
 									className="opacity-80 border-0"
@@ -60,7 +61,7 @@ function ContactAndMap({ id }) {
 						</div>
 					</div>
 
-					<form className="lg:col-span-7 h-fit grid grid-cols-1 gap-4 sm:grid-cols-2 sm:gap-5">
+					<form action={saveToSheet} className="lg:col-span-7 h-fit grid grid-cols-1 gap-4 sm:grid-cols-2 sm:gap-5">
 						<div className="sm:col-span-1">
 							<Input
 								name="fullName"
@@ -88,7 +89,7 @@ function ContactAndMap({ id }) {
 						</div>
 						<div className="sm:col-span-1">
 							<Select
-								name="project-type"
+								name="projecttype"
 								label="Project Type"
 								placeholder="Select type"
 								options={[

@@ -4,7 +4,8 @@ import Heading from "../ui/heading";
 import { MdAccountBalance, MdArrowForward, MdVerifiedUser, MdWorkspacePremium } from "react-icons/md";
 import Button from "../ui/Button";
 
-function HeroC({id}) {
+
+function HeroC({id, data}) {
 	return (
 		<Section id={id} className="mt-8 relative">
 			<div className="absolute top-0 right-0 -z-10 w-1/2 h-full bg-gradient-to-l from-primary-500/20 to-transparent blur-3xl"></div>
@@ -15,31 +16,30 @@ function HeroC({id}) {
 						<div className="inline-flex items-center space-x-2 bg-surface border border-border/50 px-4 py-1.5 rounded-full">
 							<span className="flex h-2 w-2 rounded-full bg-primary-500"></span>
 							<span className="text-xxs font-bold uppercase tracking-widest text-text-primary">
-								shadow2xl border ClassName of 2025 Applications
-								Open
+								{data?.hint}
 							</span>
 						</div>
 						<Heading as="h1">
-							Advanced Studies{" "}
-							<span className="text-primary-500">Institute</span>
+							{data?.title}
+							<span className="text-primary-500">
+								{" "}
+								{data?.titleHiglight}
+							</span>
 						</Heading>
 						<p className="main-description">
-							Elevate your professional trajectory with our
-							world-className post-graduate tracks. Master complex
-							systems, drive global innovation, and lead with
-							strategic precision.
+							{data?.desc}
 						</p>
 						<div className="flex flex-wrap gap-4 pt-4">
-						
 							<Button size="xl" variant="gradient">
 								Apply Now
 							</Button>
-							
+
 							<Button
 								size="xl"
 								variant="outline"
-								icon={<MdArrowForward />} iconPosition='right'>
-								View Benjali
+								icon={<MdArrowForward />}
+								iconPosition="right">
+								View Programs
 							</Button>
 						</div>
 						<div className="flex items-center space-x-6 pt-8 grayscale opacity-60">
