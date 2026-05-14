@@ -40,8 +40,9 @@ function AboutUs({ id, data }) {
 					</Heading>
 					<p
 						className="main-description"
-						dangerouslySetInnerHTML={{ __html: data?.desc2 }}>
-					</p>
+						dangerouslySetInnerHTML={{ __html: data?.desc2 }}
+					/>
+
 					<div className="grid grid-cols-1 sm:grid-cols-2 gap-6 pt-4">
 						<div className="flex items-center gap-4 p-4 rounded-2xl bg-background">
 							<span className="text-accent-blue text-base">
@@ -67,7 +68,6 @@ function AboutUs({ id, data }) {
 }
 
 export default AboutUs;
-
 
 /* aboutus grid images
 <div className="grid grid-cols-2 gap-6 relative">
@@ -103,7 +103,6 @@ export default AboutUs;
 		</div>
 	</div>
 </div> */
-
 
 /* 
 <div>
