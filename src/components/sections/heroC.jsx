@@ -3,6 +3,7 @@ import Section from "../ui/section";
 import Heading from "../ui/heading";
 import { MdAccountBalance, MdArrowForward, MdVerifiedUser, MdWorkspacePremium } from "react-icons/md";
 import Button from "../ui/Button";
+import Image from "next/image";
 
 
 function HeroC({id, data}) {
@@ -68,11 +69,13 @@ function HeroC({id, data}) {
 					<div className="relative group">
 						<div className="absolute -inset-4 bg-primary-500/5 rounded-[2rem] blur-2xl group-hover:bg-primary-500/10 z-10 transition-colors"></div>
 						<div className="relative overflow-hidden rounded-[2rem] border border-border aspect-square lg:aspect-auto lg:h-[550px]">
-							<img
-								alt="Modern university architecture"
-								className="w-full h-full object-cover"
-								data-alt="ultra-modern glass and concrete architecture of a research institute with large windows reflecting a blue sky and lush landscaping"
+							<Image
 								src="https://lh3.googleusercontent.com/aida-public/AB6AXuAMvjQn4c1rTBaILUOj90nt8L-j32cRlkn7RrsORzuHszE_VmvYoC4DQxx3b1qvgyM4OBwAZH7wBBUogbSzLA7cKTVD95xCnSAPwA4VnLld1agf85J-YKERleZZVJXsVpWaQHSc3C84VcTiwfz1tG9kdatbJhYakepEFMx97AVlxogHQ3YxhhocFdTviCRo9uM6A3PSprdfY9R2sgSSo4Ae7VJ8EPRoqwvDpKeXVcbfqkcg7e3iM-lVe6TPB4oc5YHKqtJZKoFwQvVl"
+								alt="Modern university campus architecture with glass facade and landscaped grounds"
+								fill
+								sizes="(max-width: 1024px) 100vw, 50vw"
+								className="object-cover"
+								quality={85}
 							/>
 							<div className="absolute inset-0 bg-gradient-to-t from-black/40 to-transparent"></div>
 							<div className="absolute bottom-8 left-8 right-8 glass-card p-6 rounded-2xl border border-border/80">
