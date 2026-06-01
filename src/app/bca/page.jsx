@@ -6,16 +6,17 @@ import DevelopmentPrograms from "@/components/sections/developmentPrograms";
 import Hero from "@/components/sections/hero";
 import Testimonial from "@/components/sections/testimonial";
 import Usp from "@/components/sections/usp";
+import { chooseUs, coreService, hero, uniqueStrength } from "@/lib/bca";
 
 import React from "react";
 
 function Bca() {
 	return (
 		<main>
-			<Hero id={"bca-hero"} />
-			<Usp id={"unique-selling-points"} />
-			<CoachingPrograms id={"coaching-programs"} />
-			<DevelopmentPrograms id={"development-programs"} />
+			<Hero id={"bca-hero"} data={hero}/>
+			<Usp id={"why-choose-benjali"} data={chooseUs} />
+			<CoachingPrograms id={"unique-strength"} data={uniqueStrength} />
+			<DevelopmentPrograms id={"core-services"} data={coreService} />
 			<Achievments id={"achievments"} />
 			<BrandShowcase id={"our-clients"} />
 			<Testimonial id={"bca-testimonials"} />

@@ -4,47 +4,20 @@ import Heading from "../ui/heading";
 import { MdArrowOutward } from "react-icons/md";
 import Card from "../ui/card";
 
-function DevelopmentPrograms({ id }) {
-	const data = [
-		{
-			title: "Build Leadership Presence",
-			desc: "Develop strong leadership qualities through real-world scenarios and immersive coaching techniques.",
-			class: "bg-white organic-tilt-1 border-border",
-		},
-		{
-			title: "Drive Engagement & Accountability",
-			desc: "Design programs that improve employee engagement, ownership, and measurable results across departments.",
-			class: "bg-[#e7f3e8] organic-tilt-2 border-green-200/50",
-		},
-		{
-			title: "Handle Workplace Challenges",
-			desc: "Equip leaders with tools to manage conflicts, handle objections, and foster a healthy culture of feedback.",
-			class: "bg-white organic-tilt-1 border-border",
-		},
-		{
-			title: "Strategic Thinking & Execution",
-			desc: "Enable leaders to think strategically, align team goals, and execute vision with precision.",
-			class: "bg-[#e7f3e8] organic-tilt-2 border-green-200/50",
-		},
-	];
+function DevelopmentPrograms({ id, data }) {
+	
 	return (
 		<Section className="relative overflow-hidden" id={id}>
 			<div className="max-w-7xl mx-auto relative z-10">
 				<div className="flex flex-col items-center text-center mb-16">
-					<Heading
-						className="mb-6"
-						helperText="managers & leaders development programs">
-						Program Objectives
+					<Heading className="mb-6" helperText={data?.hint}>
+						{data?.title}
 					</Heading>
-					<p className="main-description">
-						Create impactful leadership and corporate training
-						programs designed to enhance managerial effectiveness,
-						strategic thinking, and organizational growth.
-					</p>
+					<p className="main-description">{data?.desc}</p>
 				</div>
 
 				<div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
-					{data?.map((itm, i) => (
+					{data?.cards?.map((itm, i) => (
 						<Card
 							key={i}
 							className={`group relative flex flex-col shadow-sm hover-lift border transition-all duration-300 ${itm.class}`}>
@@ -58,7 +31,9 @@ function DevelopmentPrograms({ id }) {
 									<MdArrowOutward />
 								</span>
 							</div>
-                            <Heading as="h4" className="mb-4">{itm.title}</Heading>
+							<Heading as="h4" className="mb-4">
+								{itm.title}
+							</Heading>
 							<p className="text-sm text-text-secondary leading-relaxed">
 								Develop strong leadership qualities through
 								real-world scenarios and immersive coaching

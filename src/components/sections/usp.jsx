@@ -5,21 +5,18 @@ import { MdAccountBalance, MdArrowForward, MdGroups, MdLanguage, MdModelTraining
 import Button from "../ui/Button";
 import Card from "../ui/card";
 
-function Usp({ id }) {
+function Usp({ id, data }) {
 	return (
 		<Section id={id}>
 			<div className="mb-14 text-center max-w-4xl mx-auto">
-				<Heading
-					helperText="Forging World-ClassName Leaders"
-					className="mb-6">
-					Why Choose <span className="text-primary-500">Benjali</span>
+				<Heading helperText={data?.hint} className="mb-6">
+					{data?.title}{" "}
+					<span className="text-primary-500">
+						{data?.titleAccent}
+					</span>
 					?
 				</Heading>
-				<p className="main-description mx-auto">
-					We bridge the gap between academic theory and executive
-					excellence through a curriculum designed for the future of
-					global commerce.
-				</p>
+				<p className="main-description mx-auto">{data?.desc}</p>
 			</div>
 
 			<div className="grid grid-cols-1 md:grid-cols-12 gap-8 perspective-1000">
@@ -35,15 +32,10 @@ function Usp({ id }) {
 									</span>
 								</div>
 								<Heading as="h3" className="mb-4">
-									Industry-Aligned
-									<br />
-									Curriculum
+									{data?.card1?.title}
 								</Heading>
 								<p className="main-description reveal-content">
-									Our modules are co-developed with Fortune
-									500 executives to ensure every lesson
-									addresses real-world market demands and
-									emerging technological shifts.
+									{data?.card1?.desc}
 								</p>
 							</div>
 							<div className="flex-1 relative min-h-[300px] md:min-h-full rounded-2xl overflow-hidden shadow-2xl">
@@ -66,13 +58,10 @@ function Usp({ id }) {
 							</span>
 						</div>
 						<Heading as="h3" className="mb-4">
-							Expert
-							<br />
-							Mentorship
+							{data?.card2?.title}
 						</Heading>
 						<p className="main-description mb-10 reveal-content">
-							Gain direct access to seasoned CEOs and industry
-							veterans who provide one-on-one strategic guidance.
+							{data?.card2?.desc}
 						</p>
 						<div className="mt-auto space-y-4">
 							<div className="flex items-center gap-4 p-4 bg-secondary-50 rounded-xl transition-all hover:bg-secondary-100 group/item">
@@ -83,10 +72,10 @@ function Usp({ id }) {
 								/>
 								<div>
 									<p className="text-sm font-black text-text-secondary">
-										Jameson Thorne
+										{data?.card2?.tags[0]?.name}
 									</p>
 									<p className="text-xs text-text-muted font-bold uppercase tracking-widest">
-										Ex-VP Logistics
+										{data?.card2?.tags[0]?.position}
 									</p>
 								</div>
 							</div>
@@ -98,10 +87,10 @@ function Usp({ id }) {
 								/>
 								<div>
 									<p className="text-sm font-bold text-text-secondary">
-										Sarah Al-Zayed
+										{data?.card2?.tags[1]?.name}
 									</p>
 									<p className="text-xs text-text-muted uppercase tracking-widest">
-										Innovation Director
+										{data?.card2?.tags[1]?.position}
 									</p>
 								</div>
 							</div>
@@ -118,13 +107,10 @@ function Usp({ id }) {
 								</span>
 							</div>
 							<Heading color="white" as="h3" className="mb-4">
-								Global
-								<br />
-								Networking Hub
+								{data?.card3?.title}
 							</Heading>
 							<p className="main-description !text-white mb-10 reveal-content">
-								Join a prestigious ecosystem of 50,000+ alumni
-								spanning across 45 countries.
+								{data?.card3?.desc}
 							</p>
 						</div>
 						<div className="relative z-10">
@@ -133,7 +119,7 @@ function Usp({ id }) {
 								iconPosition="right"
 								variant="outline"
 								color="secondary-500">
-								Explore Network
+								Explore Our Approach
 							</Button>
 						</div>
 						<div className="absolute -right-24 -bottom-24 opacity-10 group-hover:opacity-20 transition-opacity duration-700">
@@ -156,14 +142,10 @@ function Usp({ id }) {
 									</span>
 								</div>
 								<Heading as="h3" className="mb-4">
-									Business
-									<br />
-									Simulations
+									{data?.card4?.title}
 								</Heading>
 								<p className="main-description">
-									Experience high-stakes decision-making in
-									our virtual lab, where market volatility
-									tests your strategic acumen.
+									{data?.card4?.desc}
 								</p>
 							</div>
 							<div className="md:w-1/2 h-64 md:h-auto rounded-2xl overflow-hidden relative shadow-inner border border-border">
